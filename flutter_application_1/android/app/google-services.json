@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412610562685",
+    "project_id": "appsifilis",
+    "storage_bucket": "appsifilis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412610562685:android:fc5310a78f54086a107f14",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412610562685-vf7v0qtirsrebi1lcbab7fsvh9ub2krl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr-5X80v1NJj1p1SSrNdpuaKKmuc55Uv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412610562685-vf7v0qtirsrebi1lcbab7fsvh9ub2krl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
