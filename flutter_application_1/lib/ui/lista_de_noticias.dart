@@ -32,7 +32,9 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
                 return new ListView.builder(
                     itemCount: docs.length,
                     itemBuilder: (context, index) {
-                      return build_card(context, docs[index].data().values);
+                      return Container(
+                          child:
+                              build_card(context, docs[index].data().values));
                     });
               }
             }));
@@ -40,29 +42,27 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
 
   Widget build_card(BuildContext context, Iterable<dynamic> dadosNoticias) {
     return Card(
-      //clipBehavior: Clip.antiAlias,
+        child: Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
+          Container(
+            child: Expanded(flex: 1, child: new Image.asset('icone.PNG')),
+          ),
           Expanded(
-              child: Container(
-            height: 50.0,
-            width: 50.0,
-            margin: new EdgeInsets.only(left: 46.0),
-            child: FlutterLogo(),
-          )),
-          Expanded(
+              flex: 3,
               child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ListTile(
-              title: Text(dadosNoticias.elementAt(1)),
-              subtitle: Text(
-                dadosNoticias.elementAt(0),
-                style: TextStyle(color: Colors.black.withOpacity(0.6)),
-              ),
-            ),
-          )),
+                padding: const EdgeInsets.all(16.0),
+                child: ListTile(
+                  title: Text(dadosNoticias.elementAt(1)),
+                  subtitle: Text(
+                    dadosNoticias.elementAt(0),
+                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  ),
+                ),
+              )),
         ],
       ),
-    );
+    ));
   }
 }
