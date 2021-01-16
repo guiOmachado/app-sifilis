@@ -10,29 +10,59 @@ class ListaDeNoticias extends StatefulWidget {
 }
 
 class ListaDeNoticiasState extends State<ListaDeNoticias> {
-  NoticiasBloc bloc = new NoticiasBloc();
-
-  @override
   Widget build(BuildContext context) {
-    bloc.getNotice();
     return Scaffold(
         appBar: AppBar(
-          title: Text('Tela de noticias'),
-        ),
-        body: StreamBuilder(
-          stream: bloc.noticeStream,
-          builder: (BuildContext context, AsyncSnapshot snapshot) {
-            if (!snapshot.hasData) {
-              CircularProgressIndicator();
-            }
-            return ListView.builder(itemBuilder: (BuildContext context, int i) {
-              //var item = ;
+            title: Text("App Sifilis"),
+            backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+        body: new StreamBuilder(
+            stream:
+                FirebaseFirestore.instance.collection('noticias').snapshots(),
+            builder: (context, snapshot) {
+              List<QueryDocumentSnapshot> docs = snapshot.data.docs;
+              print("TESTE DADOS");
+              docs.forEach((element) {
+                print(element.data());
+                //notice.add(element.data());
+              });
 
-              return ListTile(
-                  //title: Text(item['titulo']),
-                  );
-            });
-          },
-        ));
+              if (!snapshot.hasData) {
+                return CircularProgressIndicator();
+              } else {
+                return new ListView.builder(
+                    itemCount: docs.length,
+                    itemBuilder: (context, index) {
+                      return build_card(context, docs[index].data().values);
+                    });
+              }
+            }));
+  }
+
+  Widget build_card(BuildContext context, Iterable<dynamic> dadosNoticias) {
+    return Card(
+      //clipBehavior: Clip.antiAlias,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Container(
+            height: 50.0,
+            width: 50.0,
+            margin: new EdgeInsets.only(left: 46.0),
+            child: FlutterLogo(),
+          )),
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ListTile(
+              title: Text(dadosNoticias.elementAt(1)),
+              subtitle: Text(
+                dadosNoticias.elementAt(0),
+                style: TextStyle(color: Colors.black.withOpacity(0.6)),
+              ),
+            ),
+          )),
+        ],
+      ),
+    );
   }
 }
