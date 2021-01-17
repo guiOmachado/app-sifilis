@@ -50,17 +50,34 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
             child: Expanded(flex: 1, child: new Image.asset('icone.PNG')),
           ),
           Expanded(
-              flex: 3,
-              child: Padding(
+            flex: 3,
+            child: Column(children: [
+              Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: ListTile(
-                  title: Text(dadosNoticias.elementAt(1)),
+                  title: Text(dadosNoticias.elementAt(1),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent.withOpacity(0.8))),
                   subtitle: Text(
                     dadosNoticias.elementAt(0),
                     style: TextStyle(color: Colors.black.withOpacity(0.6)),
                   ),
                 ),
-              )),
+              ),
+              FlatButton(
+                textColor: Colors.blue,
+                padding: EdgeInsets.all(8.0),
+                onPressed: () {
+                  print("clicado");
+                },
+                child: Text(
+                  "Ler mais ->",
+                  style: TextStyle(fontSize: 15.0),
+                ),
+              )
+            ]),
+          )
         ],
       ),
     ));
