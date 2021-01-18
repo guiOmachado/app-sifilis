@@ -13,8 +13,8 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Notícias"),
-            backgroundColor: Colors.deepPurpleAccent[100]),
+            title: Text("Notícias", style: TextStyle(color: Colors.black)),
+            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream:
                 FirebaseFirestore.instance.collection('noticias').snapshots(),

@@ -12,8 +12,8 @@ class IdentificacaoState extends State<Identificacao> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Identificação"),
-            backgroundColor: Colors.deepPurpleAccent[100]),
+            title: Text("Identificação", style: TextStyle(color: Colors.black)),
+            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream:
                 FirebaseFirestore.instance.collection('noticias').snapshots(),
