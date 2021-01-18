@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ui/assistencia.dart';
+import 'package:flutter_application_1/ui/identificacao.dart';
 import 'package:flutter_application_1/ui/lista_de_noticias.dart';
+import 'package:flutter_application_1/ui/monitoramento.dart';
+import 'package:flutter_application_1/ui/registro.dart';
 
 /// This is the stateful widget that the main application instantiates.
 class Tabs extends StatefulWidget {
@@ -16,26 +20,10 @@ class _MyStatefulWidgetState extends State<Tabs> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     ListaDeNoticias(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 5: School',
-      style: optionStyle,
-    ),
+    Identificacao(),
+    Assistencia(),
+    Monitoramento(),
+    Registro(),
   ];
 
   void _onItemTapped(int index) {
@@ -57,23 +45,23 @@ class _MyStatefulWidgetState extends State<Tabs> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.announcement),
               label: 'Notícias',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.business),
+              icon: Icon(Icons.person_search),
               label: 'Identificação',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.school),
+              icon: Icon(Icons.assistant),
               label: 'Assistência',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.school),
+              icon: Icon(Icons.monitor),
               label: 'Monitoramento',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.school),
+              icon: Icon(Icons.report),
               label: 'Registro',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
         ],
