@@ -13,22 +13,16 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("App Sifilis"),
-            backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+            title: Text("Notícias"),
+            backgroundColor: Colors.deepPurpleAccent[100]),
         body: new StreamBuilder(
             stream:
                 FirebaseFirestore.instance.collection('noticias').snapshots(),
             builder: (context, snapshot) {
-              List<QueryDocumentSnapshot> docs = snapshot.data.docs;
-              print("TESTE DADOS");
-              docs.forEach((element) {
-                print(element.data());
-                //notice.add(element.data());
-              });
-
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
               } else {
+                List<QueryDocumentSnapshot> docs = snapshot.data.docs;
                 return new ListView.builder(
                     itemCount: docs.length,
                     itemBuilder: (context, index) {
