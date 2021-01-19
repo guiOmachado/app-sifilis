@@ -15,8 +15,9 @@ class AssistenciaState extends State<Assistencia> {
             title: Text("Assiência", style: TextStyle(color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
-            stream:
-                FirebaseFirestore.instance.collection('noticias').snapshots(),
+            stream: FirebaseFirestore.instance
+                .collection('assistencia')
+                .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
@@ -40,7 +41,9 @@ class AssistenciaState extends State<Assistencia> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Container(
-            child: Expanded(flex: 1, child: new Image.asset('icone.PNG')),
+            color: Colors.pink[300],
+            height: 100,
+            width: 10,
           ),
           Expanded(
             flex: 3,
@@ -48,14 +51,11 @@ class AssistenciaState extends State<Assistencia> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: ListTile(
-                  title: Text(dadosNoticias.elementAt(1),
+                  title: Text(dadosNoticias.elementAt(0),
                       style: TextStyle(
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent.withOpacity(0.8))),
-                  subtitle: Text(
-                    dadosNoticias.elementAt(0),
-                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                  ),
+                          color: Color.fromARGB(500, 75, 66, 121))),
                 ),
               ),
               FlatButton(

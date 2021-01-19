@@ -37,7 +37,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(500, 75, 66, 121),
-        title: Text('App Sifilis'),
+        title: Text('App Name'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
