@@ -16,7 +16,7 @@ class RegistroState extends State<Registro> {
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream:
-                FirebaseFirestore.instance.collection('noticias').snapshots(),
+                FirebaseFirestore.instance.collection('registro').snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
@@ -40,7 +40,9 @@ class RegistroState extends State<Registro> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Container(
-            child: Expanded(flex: 1, child: new Image.asset('icone.PNG')),
+            color: Colors.blue[900],
+            height: 100,
+            width: 10,
           ),
           Expanded(
             flex: 3,
@@ -48,14 +50,11 @@ class RegistroState extends State<Registro> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: ListTile(
-                  title: Text(dadosNoticias.elementAt(1),
+                  title: Text(dadosNoticias.elementAt(0),
                       style: TextStyle(
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent.withOpacity(0.8))),
-                  subtitle: Text(
-                    dadosNoticias.elementAt(0),
-                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
-                  ),
+                          color: Color.fromARGB(500, 75, 66, 121))),
                 ),
               ),
               FlatButton(

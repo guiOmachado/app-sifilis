@@ -51,11 +51,15 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
                 child: ListTile(
                   title: Text(dadosNoticias.elementAt(1),
                       style: TextStyle(
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent.withOpacity(0.8))),
+                          color: Color.fromARGB(500, 75, 66, 121))),
                   subtitle: Text(
                     dadosNoticias.elementAt(0),
-                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(500, 75, 66, 121)),
                   ),
                 ),
               ),
