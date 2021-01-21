@@ -39,6 +39,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
         backgroundColor: Color.fromARGB(500, 75, 66, 121),
         title: Text('App Name'),
       ),
+      drawer: build_side_menu(context),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -68,6 +69,78 @@ class _MyStatefulWidgetState extends State<Tabs> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.deepPurple[200],
         onTap: _onItemTapped,
+      ),
+    );
+  }
+
+  Widget build_side_menu(BuildContext context) {
+    return new Drawer(
+      child: new ListView(
+        children: [
+          Container(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    "MENU",
+                    style: TextStyle(color: Colors.white),
+                  )),
+              height: 50,
+              width: 100,
+              color: Color.fromARGB(500, 75, 66, 121)),
+          Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "IDENTIFICAÇÃO",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  height: 50,
+                  width: 100,
+                  color: Color.fromARGB(500, 75, 66, 121))),
+          Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "ASSISTÊNCIA",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  height: 50,
+                  width: 100,
+                  color: Color.fromARGB(500, 75, 66, 121))),
+          Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "MONITORAMENTO",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  height: 50,
+                  width: 100,
+                  color: Color.fromARGB(500, 75, 66, 121))),
+          Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "REGISTRO",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  height: 50,
+                  width: 100,
+                  color: Color.fromARGB(500, 75, 66, 121)))
+        ],
       ),
     );
   }
