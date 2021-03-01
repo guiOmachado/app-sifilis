@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bloc/data.dart';
 import 'package:flutter_application_1/bloc/noticias.bloc.dart';
 
 class ListaDeNoticias extends StatefulWidget {
@@ -10,6 +11,7 @@ class ListaDeNoticias extends StatefulWidget {
 }
 
 class ListaDeNoticiasState extends State<ListaDeNoticias> {
+  FluxoBloc bloc = new FluxoBloc();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -40,41 +42,20 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          Container(
-            child: Expanded(flex: 1, child: new Image.asset('icone.PNG')),
-          ),
-          Expanded(
-            flex: 3,
-            child: Column(children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: ListTile(
-                  title: Text(dadosNoticias.elementAt(1),
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(500, 75, 66, 121))),
-                  subtitle: Text(
-                    dadosNoticias.elementAt(0),
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(500, 75, 66, 121)),
-                  ),
-                ),
+          GestureDetector(
+            // When the child is tapped, show a snackbar.
+            onTap: () {
+              bloc.resposta(1);
+            },
+            // The custom button
+            child: Container(
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                color: Theme.of(context).buttonColor,
+                borderRadius: BorderRadius.circular(8.0),
               ),
-              FlatButton(
-                textColor: Colors.blue,
-                padding: EdgeInsets.all(8.0),
-                onPressed: () {
-                  print("clicado");
-                },
-                child: Text(
-                  "Ler mais ->",
-                  style: TextStyle(fontSize: 15.0),
-                ),
-              )
-            ]),
+              child: Text('SIM'),
+            ),
           )
         ],
       ),

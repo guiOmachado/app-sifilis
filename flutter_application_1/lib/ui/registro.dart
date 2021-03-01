@@ -19,7 +19,8 @@ class RegistroState extends State<Registro> {
                 FirebaseFirestore.instance.collection('registro').snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
-                return CircularProgressIndicator();
+                return Container(
+                    child: Column(children: [CircularProgressIndicator()]));
               } else {
                 List<QueryDocumentSnapshot> docs = snapshot.data.docs;
                 return new ListView.builder(
