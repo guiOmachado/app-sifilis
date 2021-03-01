@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/data.dart';
 import 'package:flutter_application_1/bloc/noticias.bloc.dart';
+import 'package:flutter_application_1/model/fluxo.dart';
 
 class ListaDeNoticias extends StatefulWidget {
   ListaDeNoticias({Key key}) : super(key: key);
@@ -15,47 +16,85 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Notícias", style: TextStyle(color: Colors.black)),
+            title:
+                Text("TESTE FLUXOGRAMA", style: TextStyle(color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
-            stream:
-                FirebaseFirestore.instance.collection('noticias').snapshots(),
+            stream: bloc.fluxogramaStream,
+            initialData: bloc.fluxo[0],
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
               } else {
-                List<QueryDocumentSnapshot> docs = snapshot.data.docs;
                 return new ListView.builder(
-                    itemCount: docs.length,
+                    itemCount: 1,
                     itemBuilder: (context, index) {
                       return Container(
-                          child:
-                              build_card(context, docs[index].data().values));
+                          child: build_card(context, snapshot.data));
                     });
               }
             }));
   }
 
-  Widget build_card(BuildContext context, Iterable<dynamic> dadosNoticias) {
+  Widget build_card(BuildContext context, Fluxo fluxo) {
     return Card(
         child: Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          GestureDetector(
-            // When the child is tapped, show a snackbar.
-            onTap: () {
-              bloc.resposta(1);
-            },
-            // The custom button
-            child: Container(
-              padding: EdgeInsets.all(12.0),
-              decoration: BoxDecoration(
-                color: Theme.of(context).buttonColor,
-                borderRadius: BorderRadius.circular(8.0),
+          Container(
+            color: Colors.cyan[300],
+            height: 100,
+            width: 10,
+          ),
+          Expanded(
+            flex: 3,
+            child: Column(children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: ListTile(
+                  title: Text(fluxo.questao,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(500, 75, 66, 121))),
+                ),
               ),
-              child: Text('SIM'),
-            ),
+              Row(
+                children: [
+                  GestureDetector(
+                    // When the child is tapped, show a snackbar.
+                    onTap: () {
+                      bloc.resposta(fluxo.sim);
+                    },
+                    // The custom button
+                    child: Container(
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).buttonColor,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Text('SIM'),
+                    ),
+                  ),
+                  GestureDetector(
+                    // When the child is tapped, show a snackbar.
+                    onTap: () {
+                      bloc.resposta(fluxo.nao);
+                    },
+                    // The custom button
+                    child: Container(
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).buttonColor,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Text('NÃO'),
+                    ),
+                  )
+                ],
+              )
+            ]),
           )
         ],
       ),

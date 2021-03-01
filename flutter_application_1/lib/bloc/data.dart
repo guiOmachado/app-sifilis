@@ -5,7 +5,7 @@ import 'package:flutter_application_1/model/fluxo.dart';
 class FluxoBloc {
   StreamController fluxograma = StreamController.broadcast();
 
-  Stream get noticeStream => fluxograma.stream;
+  Stream get fluxogramaStream => fluxograma.stream;
 
   // ignore: non_constant_identifier_names
   List<Fluxo> fluxo = [
@@ -19,7 +19,7 @@ class FluxoBloc {
     print(id);
     proximo = fluxo.firstWhere((element) => element.id == id);
     print("RESPOSTA: " + proximo.questao);
-    //fluxograma.sink.add(proximo);
+    fluxograma.sink.add(proximo);
   }
 
   void dispose() {
