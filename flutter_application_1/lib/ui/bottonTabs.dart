@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/assistencia.dart';
+import 'package:flutter_application_1/ui/fluxovdrl.dart';
 import 'package:flutter_application_1/ui/identificacao.dart';
-import 'package:flutter_application_1/ui/lista_de_noticias.dart';
 import 'package:flutter_application_1/ui/monitoramento.dart';
 import 'package:flutter_application_1/ui/registro.dart';
 
@@ -19,7 +19,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    ListaDeNoticias(),
+    FluxoVdrl(),
     Identificacao(),
     Assistencia(),
     Monitoramento(),
@@ -47,7 +47,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.announcement),
-              label: 'Notícias',
+              label: 'VDRL',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_search),
@@ -95,7 +95,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
                   child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "IDENTIFICAÇÃO",
+                        "Condução de VDRL",
                         style: TextStyle(color: Colors.white),
                       )),
                   height: 50,

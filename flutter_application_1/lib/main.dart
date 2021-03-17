@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/ui/bottonTabs.dart';
-import 'package:flutter_application_1/ui/lista_de_noticias.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

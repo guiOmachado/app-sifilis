@@ -1,23 +1,22 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/data.dart';
-import 'package:flutter_application_1/bloc/noticias.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 
-class ListaDeNoticias extends StatefulWidget {
-  ListaDeNoticias({Key key}) : super(key: key);
+class FluxoVdrl extends StatefulWidget {
+  FluxoVdrl({Key key}) : super(key: key);
 
   @override
-  ListaDeNoticiasState createState() => ListaDeNoticiasState();
+  FluxoVdrlState createState() => FluxoVdrlState();
 }
 
-class ListaDeNoticiasState extends State<ListaDeNoticias> {
+class FluxoVdrlState extends State<FluxoVdrl> {
   FluxoBloc bloc = new FluxoBloc();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             title:
-                Text("TESTE FLUXOGRAMA", style: TextStyle(color: Colors.black)),
+                Text("Condução de VDRL", style: TextStyle(color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaStream,
