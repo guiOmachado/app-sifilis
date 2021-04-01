@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bloc/conducaovdrl.bloc.dart';
+import 'package:flutter_application_1/bloc/testeRapidoGestante.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 
-class FluxoVdrl extends StatefulWidget {
-  FluxoVdrl({Key key}) : super(key: key);
+class GestanteFluxo extends StatefulWidget {
+  GestanteFluxo({Key key}) : super(key: key);
 
   @override
-  FluxoVdrlState createState() => FluxoVdrlState();
+  GestanteFluxoState createState() => GestanteFluxoState();
 }
 
-class FluxoVdrlState extends State<FluxoVdrl> {
-  FluxoVdrlBloc bloc = new FluxoVdrlBloc();
+class GestanteFluxoState extends State<GestanteFluxo> {
+  GestanteReagenteENaoReagenteBloc bloc =
+      new GestanteReagenteENaoReagenteBloc();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title:
-                Text("Condução de VDRL", style: TextStyle(color: Colors.black)),
+            title: Text("GESTANTE-CONDUÇÃO DE TESTE RÁPIDO",
+                style: TextStyle(color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
-            stream: bloc.fluxogramaStream,
-            initialData: bloc.fluxo[0],
+            stream: bloc.fluxogramaGestanteStream,
+            initialData: bloc.gestante[0],
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();

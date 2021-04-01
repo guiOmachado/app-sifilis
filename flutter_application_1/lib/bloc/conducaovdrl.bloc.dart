@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_application_1/model/fluxo.dart';
 
-class FluxoBloc {
+class FluxoVdrlBloc {
   StreamController fluxograma = StreamController.broadcast();
 
   Stream get fluxogramaStream => fluxograma.stream;

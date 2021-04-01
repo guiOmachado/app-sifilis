@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ui/assistencia.dart';
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
 import 'package:flutter_application_1/ui/identificacao.dart';
 import 'package:flutter_application_1/ui/monitoramento.dart';
 import 'package:flutter_application_1/ui/registro.dart';
+
+import 'gestanteTesteRapido.dart';
 
 /// This is the stateful widget that the main application instantiates.
 class Tabs extends StatefulWidget {
@@ -21,7 +22,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
   List<Widget> _widgetOptions = <Widget>[
     FluxoVdrl(),
     Identificacao(),
-    Assistencia(),
+    GestanteFluxo(),
     Monitoramento(),
     Registro(),
   ];
@@ -51,11 +52,11 @@ class _MyStatefulWidgetState extends State<Tabs> {
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_search),
-              label: 'Identificação',
+              label: 'outracoisa',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
               icon: Icon(Icons.assistant),
-              label: 'Assistência',
+              label: 'GestanteTesteRapido',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
               icon: Icon(Icons.monitor),
@@ -108,7 +109,7 @@ class _MyStatefulWidgetState extends State<Tabs> {
                   child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "ASSISTÊNCIA",
+                        "Teste Rápido Gestante",
                         style: TextStyle(color: Colors.white),
                       )),
                   height: 50,
