@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
-import 'package:flutter_application_1/ui/identificacao.dart';
-import 'package:flutter_application_1/ui/monitoramento.dart';
-import 'package:flutter_application_1/ui/registro.dart';
-
+import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'gestanteTesteRapido.dart';
 
 /// This is the stateful widget that the main application instantiates.
@@ -21,10 +18,8 @@ class _MyStatefulWidgetState extends State<Tabs> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     FluxoVdrl(),
-    Identificacao(),
+    TesteRapido(),
     GestanteFluxo(),
-    Monitoramento(),
-    Registro(),
   ];
 
   void _onItemTapped(int index) {
@@ -49,24 +44,17 @@ class _MyStatefulWidgetState extends State<Tabs> {
           BottomNavigationBarItem(
               icon: Icon(Icons.announcement),
               label: 'VDRL',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_search),
-              label: 'outracoisa',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              label: 'Teste Rápido',
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
               icon: Icon(Icons.assistant),
               label: 'GestanteTesteRapido',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.monitor),
-              label: 'Monitoramento',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.report),
-              label: 'Registro',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Colors.white),
         ],
+        backgroundColor: Color.fromARGB(500, 75, 66, 121),
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.deepPurple[200],
         onTap: _onItemTapped,
@@ -122,25 +110,12 @@ class _MyStatefulWidgetState extends State<Tabs> {
                   child: Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "MONITORAMENTO",
+                        "Teste Rapido",
                         style: TextStyle(color: Colors.white),
                       )),
                   height: 50,
                   width: 100,
                   color: Color.fromARGB(500, 75, 66, 121))),
-          Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "REGISTRO",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                  height: 50,
-                  width: 100,
-                  color: Color.fromARGB(500, 75, 66, 121)))
         ],
       ),
     );

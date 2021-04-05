@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bloc/conducaovdrl.bloc.dart';
+import 'package:flutter_application_1/bloc/conducaoDeTesteRapido.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 import 'package:sizer/sizer.dart';
 
-class FluxoVdrl extends StatefulWidget {
-  FluxoVdrl({Key key}) : super(key: key);
+class TesteRapido extends StatefulWidget {
+  TesteRapido({Key key}) : super(key: key);
 
   @override
-  FluxoVdrlState createState() => FluxoVdrlState();
+  TesteRapidoState createState() => TesteRapidoState();
 }
 
-class FluxoVdrlState extends State<FluxoVdrl> {
-  FluxoVdrlBloc bloc = new FluxoVdrlBloc();
+class TesteRapidoState extends State<TesteRapido> {
+  ConducaoDeTesteRapidoBloc bloc = new ConducaoDeTesteRapidoBloc();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("CONDUÇÃO DE VDRL",
+            title: Text("TESTE RAPIDO",
                 style: TextStyle(fontSize: 18, color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
-            stream: bloc.fluxogramaStream,
-            initialData: bloc.fluxo[0],
+            stream: bloc.fluxoTesteRapidoStream,
+            initialData: bloc.testeRapido[0],
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
@@ -47,27 +47,45 @@ class FluxoVdrlState extends State<FluxoVdrl> {
   }
 
   Widget build_Buttons_Fluxo(BuildContext context, Fluxo fluxo) {
-    return Container(
-        alignment: Alignment.bottomCenter,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            RaisedButton(
-                onPressed: () {
-                  bloc.resposta(fluxo.sim);
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Sim")),
-            RaisedButton(
-                onPressed: () {
-                  bloc.resposta(fluxo.nao);
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Não"))
-          ],
-        ));
+    if ((fluxo.nao == fluxo.sim) && (fluxo.nao != 0 && fluxo.sim != 0)) {
+      return RaisedButton(
+          onPressed: () {
+            bloc.resposta(fluxo.sim);
+          },
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Próximo"));
+    } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
+      return RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Fim"));
+    } else {
+      return Container(
+          alignment: Alignment.bottomCenter,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              RaisedButton(
+                  onPressed: () {
+                    bloc.resposta(fluxo.sim);
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Sim")),
+              RaisedButton(
+                  onPressed: () {
+                    bloc.resposta(fluxo.nao);
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Não"))
+            ],
+          ));
+    }
   }
 
   Widget build_Questao_Fluxo(BuildContext context, Fluxo fluxo) {

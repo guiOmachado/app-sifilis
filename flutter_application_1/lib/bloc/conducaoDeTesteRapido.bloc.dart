@@ -16,12 +16,12 @@ class ConducaoDeTesteRapidoBloc {
     new Fluxo(5, "Não reagente", 3, 6),
     new Fluxo(
         6,
-        "Gestante tem úlcera anogenital ou outro sintoma de sífilis\n\n" +
-            "Gestante teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
-            "Gestante  foi vítima de violência sexual\n\n" +
-            "Gestante com história prévia de sífilis e não completou o tratamento\n" +
-            "Gestante desconhece diagnóstico prévio de sífilis\n\n" +
-            "Gestante com chance de perda de acompanhamento no serviço\n\n",
+        "O Paciente tem úlcera anogenital ou outro sintoma de sífilis\n\n" +
+            "O Paciente teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
+            "O Paciente  foi vítima de violência sexual\n\n" +
+            "O Paciente com história prévia de sífilis e não completou o tratamento\n" +
+            "O Paciente desconhece diagnóstico prévio de sífilis\n\n" +
+            "O Paciente com chance de perda de acompanhamento no serviço\n\n",
         7,
         11),
     new Fluxo(
