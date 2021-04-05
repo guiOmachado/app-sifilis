@@ -57,9 +57,7 @@ class TesteRapidoState extends State<TesteRapido> {
           child: Text("Próximo"));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () {},
           autofocus: false,
           color: Color.fromARGB(1000, 236, 221, 252),
           child: Text("Fim"));
@@ -94,14 +92,13 @@ class TesteRapidoState extends State<TesteRapido> {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-          Container(
-            color: Colors.cyan[300],
-            height: 100,
-            width: 10,
-          ),
           Expanded(
               flex: 3,
               child: Column(children: [
+                Container(
+                  color: fluxo.cor,
+                  height: 10,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ListTile(

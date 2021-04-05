@@ -82,14 +82,13 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-          Container(
-            color: Colors.cyan[300],
-            height: 100,
-            width: 10,
-          ),
           Expanded(
               flex: 3,
               child: Column(children: [
+                Container(
+                  color: fluxo.cor,
+                  height: 10,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ListTile(
