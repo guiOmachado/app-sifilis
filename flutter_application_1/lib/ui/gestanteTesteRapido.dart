@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bloc/noticias.bloc.dart';
 import 'package:flutter_application_1/bloc/testeRapidoGestante.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
+import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'package:sizer/sizer.dart';
 
 class GestanteFluxo extends StatefulWidget {
-  GestanteFluxo({Key key}) : super(key: key);
+  GestanteFluxo({
+    Key key,
+  }) : super(key: key);
 
   @override
   GestanteFluxoState createState() => GestanteFluxoState();
@@ -14,6 +18,7 @@ class GestanteFluxo extends StatefulWidget {
 class GestanteFluxoState extends State<GestanteFluxo> {
   GestanteReagenteENaoReagenteBloc bloc =
       new GestanteReagenteENaoReagenteBloc();
+  TabsBloc tabsBloc = new TabsBloc();
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -49,31 +54,47 @@ class GestanteFluxoState extends State<GestanteFluxo> {
   }
 
   Widget build_Buttons_Fluxo(BuildContext context, Fluxo fluxo) {
-    return Container(
-        alignment: Alignment.bottomCenter,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            RaisedButton(
-                onPressed: () {
-                  bloc.resposta(fluxo.sim);
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Sim")),
-            RaisedButton(
-                onPressed: () {
-                  if (fluxo.nao == 0) {
-                    _showMyDialog();
-                  } else {
-                    bloc.resposta(fluxo.nao);
-                  }
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Não"))
-          ],
-        ));
+    if ((fluxo.nao == fluxo.sim) && (fluxo.nao != 0 && fluxo.sim != 0)) {
+      return RaisedButton(
+          onPressed: () {
+            bloc.resposta(fluxo.sim);
+          },
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Próximo"));
+    } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
+      return RaisedButton(
+          onPressed: () {},
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Fim"));
+    } else {
+      return Container(
+          alignment: Alignment.bottomCenter,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              RaisedButton(
+                  onPressed: () {
+                    bloc.resposta(fluxo.sim);
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Sim")),
+              RaisedButton(
+                  onPressed: () {
+                    if (fluxo.nao == 0) {
+                      _showMyDialog();
+                    } else {
+                      bloc.resposta(fluxo.nao);
+                    }
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Não"))
+            ],
+          ));
+    }
   }
 
   Widget build_Questao_Fluxo(BuildContext context, Fluxo fluxo) {
@@ -120,14 +141,17 @@ class GestanteFluxoState extends State<GestanteFluxo> {
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('OK'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TesteRapido()),
-                );
-              },
-            ),
+                child: Text('OK'),
+                onPressed: () {
+                  tabsBloc.getFluxo(2);
+                  Navigator.of(context).pop(true);
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Tabs();
+                    }),
+                  );
+                }),
           ],
         );
       },

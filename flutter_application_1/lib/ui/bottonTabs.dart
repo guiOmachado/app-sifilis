@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bloc/noticias.bloc.dart';
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
+import 'package:flutter_application_1/ui/menu.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'gestanteTesteRapido.dart';
 
 /// This is the stateful widget that the main application instantiates.
 class Tabs extends StatefulWidget {
-  Tabs({Key key}) : super(key: key);
-
+  Tabs({Key key, int index}) : super(key: key);
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+  _TabsState createState() => _TabsState();
 }
 
 /// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<Tabs> {
+class _TabsState extends State<Tabs> {
+  TabsBloc bloc = new TabsBloc();
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
+    Menu(),
     FluxoVdrl(),
     TesteRapido(),
     GestanteFluxo(),
   ];
 
-  void _onItemTapped(int index) {
+  void onItemTapped(int index) {
     setState(() {
+      bloc.getFluxo(index);
       _selectedIndex = index;
     });
   }
@@ -33,90 +37,46 @@ class _MyStatefulWidgetState extends State<Tabs> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(500, 75, 66, 121),
-        title: Text('App Name'),
+        title: Text(
+          'Trate sífilis',
+          textAlign: TextAlign.end,
+        ),
       ),
-      drawer: build_side_menu(context),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: new StreamBuilder(
+          stream: bloc.tabsStream,
+          initialData: 0,
+          builder: (context, snapshot) {
+            print("TESTE TROCA " + snapshot.data.toString());
+            if (!snapshot.hasData) {
+              return CircularProgressIndicator();
+            } else {
+              _selectedIndex = snapshot.data;
+              return _widgetOptions.elementAt(_selectedIndex);
+            }
+          }),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.announcement),
+              icon: Icon(Icons.menu),
+              label: 'Menu',
+              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.medical_services),
               label: 'VDRL',
-              backgroundColor: Colors.white),
+              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_search),
+              icon: Icon(Icons.bolt),
               label: 'Teste Rápido',
-              backgroundColor: Colors.white),
+              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.assistant),
+              icon: Icon(Icons.pregnant_woman),
               label: 'GestanteTesteRapido',
-              backgroundColor: Colors.white),
+              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
         ],
         backgroundColor: Color.fromARGB(500, 75, 66, 121),
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.deepPurple[200],
-        onTap: _onItemTapped,
-      ),
-    );
-  }
-
-  Widget build_side_menu(BuildContext context) {
-    return new Drawer(
-      child: new ListView(
-        children: [
-          Container(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "MENU",
-                    style: TextStyle(color: Colors.white),
-                  )),
-              height: 50,
-              width: 100,
-              color: Color.fromARGB(500, 75, 66, 121)),
-          Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Condução de VDRL",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                  height: 50,
-                  width: 100,
-                  color: Color.fromARGB(500, 75, 66, 121))),
-          Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Teste Rápido Gestante",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                  height: 50,
-                  width: 100,
-                  color: Color.fromARGB(500, 75, 66, 121))),
-          Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Container(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        "Teste Rapido",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                  height: 50,
-                  width: 100,
-                  color: Color.fromARGB(500, 75, 66, 121))),
-        ],
+        onTap: onItemTapped,
       ),
     );
   }
