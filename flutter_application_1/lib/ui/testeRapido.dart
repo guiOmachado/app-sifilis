@@ -130,29 +130,38 @@ class TesteRapidoState extends State<TesteRapido> {
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('AlertDialog Title'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text('Este não é o fluxo indicado para a situação.'),
-                Text('Você será direcionado para o fluxo correto.'),
-              ],
+            title: Text(
+              'Opa . . .',
+              style: TextStyle(
+                  fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)),
             ),
-          ),
-          actions: <Widget>[
-            TextButton(
-                child: Text('OK'),
-                onPressed: () {
-                  Navigator.of(context).pop(true);
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return Tabs3();
-                    }),
-                  );
-                }),
-          ],
-        );
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(
+                      'Este não é o fluxo indicado para a situação, você será direcionado para o fluxo correto.',
+                      style: TextStyle(fontSize: 18))
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              RaisedButton(
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text('OK',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Color.fromARGB(500, 75, 66, 121))),
+                  onPressed: () {
+                    Navigator.of(context).pop(true);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return Tabs3();
+                      }),
+                    );
+                  }),
+            ],
+            elevation: 25);
       },
     );
   }
