@@ -49,7 +49,7 @@ class _Tabs1State extends State<Tabs1> {
       ),
       body: new StreamBuilder(
           stream: bloc.tabsStream,
-          initialData: 2,
+          initialData: 1,
           builder: (context, snapshot) {
             if (!snapshot.hasData) {
               return CircularProgressIndicator();
