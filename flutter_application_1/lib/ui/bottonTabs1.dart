@@ -6,14 +6,14 @@ import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'gestanteTesteRapido.dart';
 
 /// This is the stateful widget that the main application instantiates.
-class Tabs2 extends StatefulWidget {
-  Tabs2({Key key, int index}) : super(key: key);
+class Tabs1 extends StatefulWidget {
+  Tabs1({Key key, int index}) : super(key: key);
   @override
-  _Tabs2State createState() => _Tabs2State();
+  _Tabs1State createState() => _Tabs1State();
 }
 
 /// This is the private State class that goes with MyStatefulWidget.
-class _Tabs2State extends State<Tabs2> {
+class _Tabs1State extends State<Tabs1> {
   TabsBloc bloc = new TabsBloc();
   int _selectedIndex = 0;
   int _index = 0;
@@ -36,7 +36,7 @@ class _Tabs2State extends State<Tabs2> {
   @override
   Widget build(BuildContext context) {
     if (_selectedIndex == 0 && _index == 0) {
-      _selectedIndex = 2;
+      _selectedIndex = 1;
       _index++;
     }
     return Scaffold(
