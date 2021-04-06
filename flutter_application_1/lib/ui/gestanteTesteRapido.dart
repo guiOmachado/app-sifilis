@@ -3,6 +3,7 @@ import 'package:flutter_application_1/bloc/noticias.bloc.dart';
 import 'package:flutter_application_1/bloc/testeRapidoGestante.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 import 'package:flutter_application_1/ui/bottonTabs.dart';
+import 'package:flutter_application_1/ui/bottonTabs2.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'package:sizer/sizer.dart';
 
@@ -143,12 +144,11 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             TextButton(
                 child: Text('OK'),
                 onPressed: () {
-                  tabsBloc.getFluxo(2);
                   Navigator.of(context).pop(true);
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return Tabs();
+                      return Tabs2();
                     }),
                   );
                 }),
