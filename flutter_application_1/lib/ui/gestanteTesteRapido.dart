@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bloc/noticias.bloc.dart';
+import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 import 'package:flutter_application_1/bloc/testeRapidoGestante.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:flutter_application_1/ui/bottonTabs2.dart';
-import 'package:flutter_application_1/ui/testeRapido.dart';
+
 import 'package:sizer/sizer.dart';
 
 class GestanteFluxo extends StatefulWidget {
@@ -65,7 +65,12 @@ class GestanteFluxoState extends State<GestanteFluxo> {
           child: Text("Próximo"));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return Tabs();
+            }));
+          },
           autofocus: false,
           color: Color.fromARGB(1000, 236, 221, 252),
           child: Text("Fim"));

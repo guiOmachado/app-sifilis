@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/conducaoDeTesteRapido.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
+import 'package:flutter_application_1/ui/bottonTabs.dart';
+import 'package:flutter_application_1/ui/bottonTabs3.dart';
 import 'package:sizer/sizer.dart';
 
 class TesteRapido extends StatefulWidget {
@@ -57,7 +59,12 @@ class TesteRapidoState extends State<TesteRapido> {
           child: Text("Próximo"));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return Tabs();
+            }));
+          },
           autofocus: false,
           color: Color.fromARGB(1000, 236, 221, 252),
           child: Text("Fim"));
@@ -69,7 +76,11 @@ class TesteRapidoState extends State<TesteRapido> {
             children: [
               RaisedButton(
                   onPressed: () {
-                    bloc.resposta(fluxo.sim);
+                    if (fluxo.sim == 0) {
+                      _showMyDialog();
+                    } else {
+                      bloc.resposta(fluxo.sim);
+                    }
                   },
                   autofocus: false,
                   color: Color.fromARGB(1000, 236, 221, 252),
@@ -80,7 +91,7 @@ class TesteRapidoState extends State<TesteRapido> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(1000, 236, 221, 252),
-                  child: Text("Não"))
+                  child: Text("Não")),
             ],
           ));
     }
@@ -111,5 +122,38 @@ class TesteRapidoState extends State<TesteRapido> {
                 )
               ]))
         ])));
+  }
+
+  Future<void> _showMyDialog() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('AlertDialog Title'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('Este não é o fluxo indicado para a situação.'),
+                Text('Você será direcionado para o fluxo correto.'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Tabs3();
+                    }),
+                  );
+                }),
+          ],
+        );
+      },
+    );
   }
 }

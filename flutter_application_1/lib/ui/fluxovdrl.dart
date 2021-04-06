@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/conducaovdrl.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
+import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:sizer/sizer.dart';
 
 class FluxoVdrl extends StatefulWidget {
@@ -20,7 +21,7 @@ class FluxoVdrlState extends State<FluxoVdrl> {
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaStream,
-            initialData: bloc.fluxo[0],
+            initialData: bloc.fluxo[1],
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return CircularProgressIndicator();
@@ -47,27 +48,52 @@ class FluxoVdrlState extends State<FluxoVdrl> {
   }
 
   Widget build_Buttons_Fluxo(BuildContext context, Fluxo fluxo) {
-    return Container(
-        alignment: Alignment.bottomCenter,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            RaisedButton(
-                onPressed: () {
-                  bloc.resposta(fluxo.sim);
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Sim")),
-            RaisedButton(
-                onPressed: () {
-                  bloc.resposta(fluxo.nao);
-                },
-                autofocus: false,
-                color: Color.fromARGB(1000, 236, 221, 252),
-                child: Text("Não"))
-          ],
-        ));
+    if ((fluxo.nao == fluxo.sim) && (fluxo.nao != 0 && fluxo.sim != 0)) {
+      return RaisedButton(
+          onPressed: () {
+            bloc.resposta(fluxo.sim);
+          },
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Próximo"));
+    } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
+      return RaisedButton(
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return Tabs();
+            }));
+          },
+          autofocus: false,
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Fim"));
+    } else {
+      return Container(
+          alignment: Alignment.bottomCenter,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              RaisedButton(
+                  onPressed: () {
+                    bloc.resposta(fluxo.sim);
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Sim")),
+              RaisedButton(
+                  onPressed: () {
+                    if (fluxo.nao == 0) {
+                      //_showMyDialog();
+                    } else {
+                      bloc.resposta(fluxo.nao);
+                    }
+                  },
+                  autofocus: false,
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Não"))
+            ],
+          ));
+    }
   }
 
   Widget build_Questao_Fluxo(BuildContext context, Fluxo fluxo) {

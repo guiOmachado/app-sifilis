@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bloc/noticias.bloc.dart';
+import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
 import 'package:flutter_application_1/ui/menu.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
