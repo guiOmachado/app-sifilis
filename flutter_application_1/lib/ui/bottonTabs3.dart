@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
 import 'package:flutter_application_1/ui/menu.dart';
+import 'package:flutter_application_1/ui/telaDeNoticias.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'gestanteTesteRapido.dart';
 
@@ -24,6 +25,7 @@ class _Tabs3State extends State<Tabs3> {
     FluxoVdrl(),
     TesteRapido(),
     GestanteFluxo(),
+    ListaDeNoticias()
   ];
 
   void onItemTapped(int index) {

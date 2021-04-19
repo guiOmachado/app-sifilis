@@ -29,15 +29,16 @@ class FluxoVdrlState extends State<FluxoVdrl> {
                 return Container(
                     alignment: Alignment.center,
                     width: 100.0.w,
-                    height: 90.0.h,
+                    height: 70.0.h,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
                               alignment: Alignment.topCenter,
                               width: 100.0.w,
-                              child:
-                                  build_Questao_Fluxo(context, snapshot.data)),
+                              child: Container(
+                                  child: build_Questao_Fluxo(
+                                      context, snapshot.data))),
                           Container(
                               alignment: Alignment.bottomCenter,
                               child:
@@ -114,7 +115,7 @@ class FluxoVdrlState extends State<FluxoVdrl> {
                   child: ListTile(
                     title: Text(fluxo.questao,
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(500, 75, 66, 121))),
                   ),

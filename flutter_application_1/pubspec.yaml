@@ -54,6 +54,7 @@ flutter:
     - assets/images/vdrl.png
     - assets/splashscreen/logo.png
     - assets/splashscreen/loading.flr
+    - assets/noticias.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

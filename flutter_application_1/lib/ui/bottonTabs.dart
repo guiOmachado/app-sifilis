@@ -3,6 +3,7 @@ import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 
 import 'package:flutter_application_1/ui/fluxovdrl.dart';
 import 'package:flutter_application_1/ui/menu.dart';
+import 'package:flutter_application_1/ui/telaDeNoticias.dart';
 import 'package:flutter_application_1/ui/testeRapido.dart';
 import 'gestanteTesteRapido.dart';
 
@@ -21,9 +22,10 @@ class _TabsState extends State<Tabs> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     Menu(),
-    FluxoVdrl(),
     TesteRapido(),
     GestanteFluxo(),
+    FluxoVdrl(),
+    ListaDeNoticias()
   ];
 
   void onItemTapped(int index) {
@@ -62,16 +64,16 @@ class _TabsState extends State<Tabs> {
               label: 'Menu',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.medical_services),
-              label: 'VDRL',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
-          BottomNavigationBarItem(
               icon: Icon(Icons.bolt),
               label: 'Teste Rápido',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
           BottomNavigationBarItem(
               icon: Icon(Icons.pregnant_woman),
               label: 'GestanteTesteRapido',
+              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.medical_services),
+              label: 'VDRL',
               backgroundColor: Color.fromARGB(500, 75, 66, 121)),
         ],
         backgroundColor: Color.fromARGB(500, 75, 66, 121),

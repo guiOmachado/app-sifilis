@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/conducaoDeTesteRapido.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 import 'package:flutter_application_1/ui/bottonTabs.dart';
-import 'package:flutter_application_1/ui/bottonTabs3.dart';
+import 'package:flutter_application_1/ui/bottonTabs2.dart';
 import 'package:sizer/sizer.dart';
 
 class TesteRapido extends StatefulWidget {
@@ -115,7 +115,7 @@ class TesteRapidoState extends State<TesteRapido> {
                   child: ListTile(
                     title: Text(fluxo.questao,
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(500, 75, 66, 121))),
                   ),
@@ -156,7 +156,7 @@ class TesteRapidoState extends State<TesteRapido> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return Tabs3();
+                        return Tabs2();
                       }),
                     );
                   }),

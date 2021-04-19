@@ -4,6 +4,7 @@ import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:flutter_application_1/ui/bottonTabs1.dart';
 import 'package:flutter_application_1/ui/bottonTabs2.dart';
 import 'package:flutter_application_1/ui/bottonTabs3.dart';
+import 'package:flutter_application_1/ui/bottonTabs4.dart';
 import 'package:sizer/sizer.dart';
 
 class Menu extends StatefulWidget {
@@ -21,11 +22,12 @@ class MenuState extends State<Menu> {
     Tabs1(),
     Tabs2(),
     Tabs3(),
+    Tabs4()
   ];
 
   List<Widget> _icons = <Widget>[
     Image.asset(
-      'assets/images/vdrl.png',
+      'assets/images/noticias.png',
       height: 100,
       width: 100,
     ),
@@ -44,6 +46,11 @@ class MenuState extends State<Menu> {
       height: 100,
       width: 100,
     ),
+    Image.asset(
+      'assets/images/noticias.png',
+      height: 100,
+      width: 100,
+    )
   ];
 
   List<Widget> _titles = <Widget>[
@@ -62,6 +69,11 @@ class MenuState extends State<Menu> {
         style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
+            color: Color.fromARGB(500, 75, 66, 121))),
+    Text("Noticias",
+        style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
             color: Color.fromARGB(500, 75, 66, 121)))
   ];
 
@@ -74,9 +86,10 @@ class MenuState extends State<Menu> {
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            build_selecao(context, 1),
             build_selecao(context, 2),
-            build_selecao(context, 3)
+            build_selecao(context, 3),
+            build_selecao(context, 1),
+            build_selecao(context, 4)
           ],
         ));
   }
