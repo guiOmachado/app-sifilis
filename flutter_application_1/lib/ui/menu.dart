@@ -5,7 +5,6 @@ import 'package:flutter_application_1/ui/bottonTabs1.dart';
 import 'package:flutter_application_1/ui/bottonTabs2.dart';
 import 'package:flutter_application_1/ui/bottonTabs3.dart';
 import 'package:flutter_application_1/ui/bottonTabs4.dart';
-import 'package:sizer/sizer.dart';
 
 class Menu extends StatefulWidget {
   Menu({Key key}) : super(key: key);
@@ -80,7 +79,7 @@ class MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("MENU",
+            title: Text("Menu",
                 style: TextStyle(fontSize: 18, color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new Column(
@@ -108,7 +107,7 @@ class MenuState extends State<Menu> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
               Container(
-                color: Colors.red,
+                color: Colors.deepPurple[100],
                 height: 100,
                 width: 10,
               ),

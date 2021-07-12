@@ -23,7 +23,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("GESTANTE-CONDUÇÃO DE TESTE RÁPIDO",
+            title: Text("Condução de teste rápido em gestante",
                 style: TextStyle(fontSize: 18, color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(

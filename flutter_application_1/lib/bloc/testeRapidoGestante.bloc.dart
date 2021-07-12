@@ -26,13 +26,13 @@ class GestanteReagenteENaoReagenteBloc {
             "Gestante com chance de perda de acompanhamento no serviço\n\n",
         7,
         11,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         7,
         "Interpretação: SÍFILIS RECENTE (primária, secundária ou latente recente)",
         8,
         8,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         8,
         "- Solicitar VDRL imediatamente e agendar retorno para mostrar exame.\n" +
@@ -46,7 +46,7 @@ class GestanteReagenteENaoReagenteBloc {
             "- Avaliar e tratar para SÍFILIS RECENTE as parcerias sexuais dos últimos 3 meses.",
         10,
         10,
-        Colors.purple),
+        Colors.green),
     new Fluxo(
         10,
         "TRATAMENTO ADEQUADO É QUANDO:\n" +
@@ -55,37 +55,38 @@ class GestanteReagenteENaoReagenteBloc {
         0,
         0,
         Colors.yellow),
-    new Fluxo(11, "Solicitar VDRL e aguardar resultado.", 10, 10, Colors.green),
+    new Fluxo(11, "Solicitar VDRL e aguardar resultado.", 10, 10,
+        Colors.blueAccent[100]),
     new Fluxo(12, "O paciente tem úlcera anogenital ou outro sintoma?", 16, 13,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         13,
         "O paciente teve parceria sexual (nos últimos 3 meses)\ncom diagnóstico de sífilis e não foi tratado?",
         16,
         14,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(14, "Interpretação: Teste NEGATIVO para sífilis", 15, 15,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         15,
         "Orientar:\n\n - GESTANTE - repetir o teste no terceiro trimestre" +
             "(28ª semana de gestação), se já não tiver sido realizado e, no momento do parto (ou em caso de aborto/natimorto).",
         0,
         0,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         16,
         "Interpretação: SÍFILIS RECENTE (primária, secundária ou latente recente)",
         17,
         17,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         17,
         "Tratar imediatamente com dose única de Benzilpenicilina benzatina 2,4 milhões UI, intramuscular.\n" +
             "Se gestante/lactante tiver história préviade reação grave/anafilaxia após o uso de pencilina, encaminhar para especialista.",
         18,
         18,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         18,
         "Solicitar VDRL imediatamente e agendar retorno para mostrar exame.",
@@ -105,7 +106,7 @@ class GestanteReagenteENaoReagenteBloc {
         "- Avaliar e tratar para SÍFILIS RECENTE as parcerias sexuais dos últimos 3 meses.",
         20,
         20,
-        Colors.purple),
+        Colors.green),
     new Fluxo(
         20,
         "TRATAMENTO ADEQUADO É QUANDO:\n\n" +

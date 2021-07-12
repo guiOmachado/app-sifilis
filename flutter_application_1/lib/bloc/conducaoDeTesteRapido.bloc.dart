@@ -19,26 +19,26 @@ class ConducaoDeTesteRapidoBloc {
     new Fluxo(
         6,
         "O Paciente tem úlcera anogenital ou outro sintoma de sífilis\n\n" +
-            "O Paciente teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
-            "O Paciente  foi vítima de violência sexual\n\n" +
-            "O Paciente com história prévia de sífilis e não completou o tratamento\n" +
-            "O Paciente desconhece diagnóstico prévio de sífilis\n\n" +
-            "O Paciente com chance de perda de acompanhamento no serviço\n\n",
+            "Ou Paciente teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
+            "Ou Paciente  foi vítima de violência sexual\n\n" +
+            "Ou Paciente com história prévia de sífilis e não completou o tratamento\n" +
+            "Ou Paciente desconhece diagnóstico prévio de sífilis\n\n" +
+            "Ou Paciente com chance de perda de acompanhamento no serviço\n\n",
         7,
         11,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         7,
         "Interpretação:\n SÍFILIS RECENTE (primária, secundária ou latente recente)",
         8,
         8,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         8,
         "Tratar imediatamente com dose única de Benzilpenicilina benzatina 2,4 milhões UI, intramuscular.",
         9,
         9,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         9,
         "- Solicitar VDRL imediatamente e agendar retorno para mostrar exame.\n\n"
@@ -55,19 +55,19 @@ class ConducaoDeTesteRapidoBloc {
             "Aguardar o resultado do VDRL para notificar o caso",
         0,
         0,
-        Colors.purple),
+        Colors.green),
     new Fluxo(11, "Solicitar VDRL e aguardar resultado.", 10, 10,
         Colors.greenAccent[300]),
     new Fluxo(12, "O paciente tem úlcera anogenital ou outro sintoma?", 16, 13,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         13,
         "O paciente teve parceria sexual (nos últimos 3 meses)\ncom diagnóstico de sífilis e não foi tratado?",
         16,
         14,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(14, "Interpretação: Teste NEGATIVO para sífilis", 15, 15,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         15,
         "Orientar periodicidade da testagem:\n\n"
@@ -76,25 +76,25 @@ class ConducaoDeTesteRapidoBloc {
             "- TRIMESTRALMENTE: Pessoa em uso de PrEP.",
         0,
         0,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         16,
         "Interpretação: SÍFILIS RECENTE (primária, secundária ou latente recente)",
         17,
         17,
-        Colors.pinkAccent[100]),
+        Colors.orange[800]),
     new Fluxo(
         17,
         "Tratar imediatamente com dose única de Benzilpenicilina benzatina 2,4 milhões UI, intramuscular.",
         18,
         18,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         18,
         "Solicitar VDRL imediatamente e agendar retorno para mostrar exame.",
         19,
         19,
-        Colors.green),
+        Colors.blueAccent[100]),
     new Fluxo(
         18,
         "- Orientar sobre a importância de realizar um novo teste rápido para sífilis após 30 dias, devido janela imunológica.\n\n" +
@@ -109,7 +109,7 @@ class ConducaoDeTesteRapidoBloc {
             "- avaliar e tratar para SÍFILIS RECENTE as parcerias sexuais dos últimos 3 meses.",
         20,
         20,
-        Colors.purple),
+        Colors.green),
     new Fluxo(
         20,
         "TRATAMENTO ADEQUADO É QUANDO:\n\n" +
