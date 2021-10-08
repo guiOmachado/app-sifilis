@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ListaDeNoticias extends StatefulWidget {
   ListaDeNoticias({Key key}) : super(key: key);
@@ -43,11 +44,7 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
   Widget build_card(BuildContext context, Iterable<dynamic> dadosNoticias) {
     return GestureDetector(
         onTap: () {
-          /*Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return _widgetOptions.elementAt(index);
-          }));*/
-          print("VAI PARA UM LINK");
+          launchURL(dadosNoticias.elementAt(0));
         },
         child: Card(
             child: Container(
@@ -55,8 +52,7 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
               Container(
-                child: FlutterLogo(),
-                color: Colors.red,
+                color: Colors.amber,
                 height: 100,
                 width: 10,
               ),
@@ -67,11 +63,19 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
                         padding: const EdgeInsets.all(16.0),
                         child: ListTile(
                           title: Text(dadosNoticias.elementAt(1)),
-                          subtitle: Text(dadosNoticias.elementAt(0),
+                          subtitle: Text(dadosNoticias.elementAt(2),
                               style: TextStyle(
                                   color: Colors.black.withOpacity(0.6))),
                         )),
                   ]))
             ]))));
+  }
+
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

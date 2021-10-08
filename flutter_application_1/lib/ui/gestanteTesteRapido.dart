@@ -3,7 +3,7 @@ import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 import 'package:flutter_application_1/bloc/testeRapidoGestante.bloc.dart';
 import 'package:flutter_application_1/model/fluxo.dart';
 import 'package:flutter_application_1/ui/bottonTabs.dart';
-import 'package:flutter_application_1/ui/bottonTabs1.dart';
+import 'package:flutter_application_1/ui/bottonTabs2.dart';
 
 import 'package:sizer/sizer.dart';
 
@@ -162,7 +162,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return Tabs1();
+                        return Tabs2();
                       }),
                     );
                   }),

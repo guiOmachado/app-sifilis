@@ -38,7 +38,7 @@ class _Tabs4State extends State<Tabs4> {
   @override
   Widget build(BuildContext context) {
     if (_selectedIndex == 0 && _index == 0) {
-      _selectedIndex = 3;
+      _selectedIndex = 0;
       _index++;
     }
     return Scaffold(
