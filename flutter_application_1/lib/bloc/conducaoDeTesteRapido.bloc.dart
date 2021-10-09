@@ -18,15 +18,32 @@ class ConducaoDeTesteRapidoBloc {
     new Fluxo(5, "Não reagente", 3, 6, Colors.black),
     new Fluxo(
         6,
-        "O Paciente tem úlcera anogenital ou outro sintoma de sífilis\n\n" +
-            "Ou Paciente teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
-            "Ou Paciente  foi vítima de violência sexual\n\n" +
-            "Ou Paciente com história prévia de sífilis e não completou o tratamento\n" +
-            "Ou Paciente desconhece diagnóstico prévio de sífilis\n\n" +
-            "Ou Paciente com chance de perda de acompanhamento no serviço\n\n",
+        "O Paciente tem úlcera anogenital ou outro sintoma de sífilis\n\n",
         7,
-        11,
+        21,
         Colors.orange[800]),
+    new Fluxo(
+        21,
+        "Paciente teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n",
+        7,
+        22,
+        Colors.orange[800]),
+    new Fluxo(
+        22,
+        "Paciente com chance de perda de acompanhamento no serviço\n\n",
+        7,
+        23,
+        Colors.orange[800]),
+    new Fluxo(23, "Paciente  foi vítima de violência sexual\n\n", 7, 24,
+        Colors.orange[800]),
+    new Fluxo(
+        24,
+        "Paciente com história prévia de sífilis e não completou o tratamento\n",
+        7,
+        25,
+        Colors.orange[800]),
+    new Fluxo(25, "Paciente desconhece diagnóstico prévio de sífilis\n\n", 7,
+        11, Colors.orange[800]),
     new Fluxo(
         7,
         "Interpretação:\n SÍFILIS RECENTE (primária, secundária ou latente recente)",
@@ -57,7 +74,7 @@ class ConducaoDeTesteRapidoBloc {
         0,
         Colors.green),
     new Fluxo(11, "Solicitar VDRL e aguardar resultado.", 10, 10,
-        Colors.greenAccent[300]),
+        Colors.blueAccent[100]),
     new Fluxo(12, "O paciente tem úlcera anogenital ou outro sintoma?", 16, 13,
         Colors.orange[800]),
     new Fluxo(

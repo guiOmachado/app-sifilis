@@ -18,12 +18,29 @@ class GestanteReagenteENaoReagenteBloc {
     new Fluxo(5, "Não reagente", 3, 6, Colors.black),
     new Fluxo(
         6,
-        "Gestante tem úlcera anogenital ou outro sintoma de sífilis\n\n" +
-            "Gestante teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n" +
-            "Gestante  foi vítima de violência sexual\n\n" +
-            "Gestante com história prévia de sífilis e não completou o tratamento\n" +
-            "Gestante desconhece diagnóstico prévio de sífilis\n\n" +
-            "Gestante com chance de perda de acompanhamento no serviço\n\n",
+        "Gestante tem úlcera anogenital ou outro sintoma de sífilis\n\n",
+        7,
+        21,
+        Colors.orange[800]),
+    new Fluxo(
+        21,
+        "Gestante teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n",
+        7,
+        22,
+        Colors.orange[800]),
+    new Fluxo(22, "Gestante  foi vítima de violência sexual\n\n", 7, 23,
+        Colors.orange[800]),
+    new Fluxo(
+        23,
+        "Gestante com história prévia de sífilis e não completou o tratamento\n",
+        7,
+        24,
+        Colors.orange[800]),
+    new Fluxo(24, "Gestante desconhece diagnóstico prévio de sífilis\n\n", 7,
+        25, Colors.orange[800]),
+    new Fluxo(
+        25,
+        "Gestante com chance de perda de acompanhamento no serviço\n\n",
         7,
         11,
         Colors.orange[800]),
