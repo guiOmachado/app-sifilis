@@ -56,7 +56,7 @@ flutter:
     - assets/splashscreen/logo.png
     - assets/splashscreen/loading.flr
     - assets/noticias.png
-    
+    - assets/images/imagem_do_app.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

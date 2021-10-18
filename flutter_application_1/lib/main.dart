@@ -1,9 +1,5 @@
-import 'dart:convert';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:flutter_application_1/ui/open.dart';
 import 'package:flutter_application_1/ui/splashScreen.dart';
 import 'package:sizer/sizer_util.dart';
