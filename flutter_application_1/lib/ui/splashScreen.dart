@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_1/main.dart';
-import 'package:flutter_application_1/ui/bottonTabs.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class SplashScreenWidget extends StatelessWidget {
       children: <Widget>[
         SplashScreen(
           seconds: 5,
-          backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+          backgroundColor: Color.fromARGB(1000, 142, 197, 231),
           navigateAfterSeconds: MyApp(),
           loaderColor: Colors.transparent,
         ),
@@ -39,7 +39,9 @@ class SplashScreenWidget extends StatelessWidget {
                 width: 150,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/splashscreen/logo.png"),
+                        image: AssetImage(
+                          "assets/images/imagem_do_app.png",
+                        ),
                         fit: BoxFit.contain)),
               ),
             ),
