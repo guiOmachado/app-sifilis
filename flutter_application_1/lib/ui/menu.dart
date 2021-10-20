@@ -5,6 +5,7 @@ import 'package:flutter_application_1/ui/bottonTabs1.dart';
 import 'package:flutter_application_1/ui/bottonTabs2.dart';
 import 'package:flutter_application_1/ui/bottonTabs3.dart';
 import 'package:flutter_application_1/ui/bottonTabs4.dart';
+import 'package:flutter_application_1/ui/navDrawer.dart';
 
 class Menu extends StatefulWidget {
   Menu({Key key}) : super(key: key);
@@ -90,7 +91,8 @@ class MenuState extends State<Menu> {
             build_selecao(context, 1),
             build_selecao(context, 4)
           ],
-        ));
+        ),
+        drawer: NavDrawer());
   }
 
   Widget build_selecao(BuildContext context, int index) {
