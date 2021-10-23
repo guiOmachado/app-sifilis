@@ -32,8 +32,12 @@ class _PoliticasDePrivacidadeState extends State<PoliticasDePrivacidade> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 142, 197, 231),
-        title: Text("Política de Privacidade"),
+        backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+        title: Text("Política de Privacidade",
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(500, 75, 66, 121))),
       ),
       body: _loading
           ? Center(
@@ -41,9 +45,9 @@ class _PoliticasDePrivacidadeState extends State<PoliticasDePrivacidade> {
             )
           : PDFViewer(
               document: _doc,
-              indicatorBackground: Color.fromARGB(255, 142, 197, 231),
+              indicatorBackground: Color.fromARGB(500, 75, 66, 121),
               // showIndicator: false,
-              // showPicker: false,
+              showPicker: false,
             ),
     );
   }

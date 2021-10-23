@@ -15,8 +15,12 @@ class ReferenciasState extends State<Referencias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(1000, 142, 197, 231),
-          title: Text("Referências"),
+          backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+          title: Text("Referências",
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(500, 75, 66, 121))),
           centerTitle: true,
         ),
         body: new ListView.builder(
@@ -34,7 +38,7 @@ class ReferenciasState extends State<Referencias> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
           Container(
-            color: Color.fromARGB(1000, 121, 215, 148),
+            color: Color.fromARGB(500, 75, 66, 121),
             height: 100,
             width: 10,
           ),

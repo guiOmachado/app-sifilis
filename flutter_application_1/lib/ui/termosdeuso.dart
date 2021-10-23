@@ -32,8 +32,12 @@ class _TermosDeUsoState extends State<TermosDeUso> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(1000, 142, 197, 231),
-        title: Text("Termos de Uso"),
+        backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+        title: Text("Termos de Uso",
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(500, 75, 66, 121))),
       ),
       body: _loading
           ? Center(
@@ -41,9 +45,9 @@ class _TermosDeUsoState extends State<TermosDeUso> {
             )
           : PDFViewer(
               document: _doc,
-              indicatorBackground: Color.fromARGB(1000, 142, 197, 231),
+              indicatorBackground: Color.fromARGB(500, 75, 66, 121),
               // showIndicator: false,
-              // showPicker: false,
+              showPicker: false,
             ),
     );
   }
