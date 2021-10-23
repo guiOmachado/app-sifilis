@@ -56,8 +56,7 @@ class TesteRapidoState extends State<TesteRapido> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 181, 143, 200),
-          child: Text("Próximo",
-              style: TextStyle(fontSize: 18, color: Colors.white)));
+          child: Text("Próximo", style: TextStyle(color: Colors.white)));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
           onPressed: () {
@@ -68,8 +67,7 @@ class TesteRapidoState extends State<TesteRapido> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 181, 143, 200),
-          child:
-              Text("Fim", style: TextStyle(fontSize: 18, color: Colors.white)));
+          child: Text("Fim", style: TextStyle(color: Colors.white)));
     } else {
       return Container(
           alignment: Alignment.bottomCenter,
@@ -86,16 +84,14 @@ class TesteRapidoState extends State<TesteRapido> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 181, 143, 200),
-                  child: Text("Sim",
-                      style: TextStyle(fontSize: 18, color: Colors.white))),
+                  child: Text("Sim", style: TextStyle(color: Colors.white))),
               RaisedButton(
                   onPressed: () {
                     bloc.resposta(fluxo.nao);
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 181, 143, 200),
-                  child: Text("Não",
-                      style: TextStyle(fontSize: 18, color: Colors.white))),
+                  child: Text("Não", style: TextStyle(color: Colors.white))),
             ],
           ));
     }

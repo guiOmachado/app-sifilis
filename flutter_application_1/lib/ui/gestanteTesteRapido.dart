@@ -24,7 +24,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Condução de teste rápido em gestante",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
+                style: TextStyle(fontSize: 18, color: Colors.white)),
             backgroundColor: Color.fromARGB(255, 222, 129, 85)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaGestanteStream,
@@ -62,7 +62,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 222, 129, 85),
-          child: Text("Próximo"));
+          child: Text("Próximo", style: TextStyle(color: Colors.white)));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
           onPressed: () {
@@ -73,7 +73,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 222, 129, 85),
-          child: Text("Fim"));
+          child: Text("Fim", style: TextStyle(color: Colors.white)));
     } else {
       return Container(
           alignment: Alignment.bottomCenter,
@@ -86,7 +86,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 222, 129, 85),
-                  child: Text("Sim")),
+                  child: Text("Sim", style: TextStyle(color: Colors.white))),
               RaisedButton(
                   onPressed: () {
                     if (fluxo.nao == 0) {
@@ -97,7 +97,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 222, 129, 85),
-                  child: Text("Não"))
+                  child: Text("Não", style: TextStyle(color: Colors.white)))
             ],
           ));
     }
@@ -153,8 +153,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             actions: <Widget>[
               RaisedButton(
                   color: Color.fromARGB(255, 222, 129, 85),
-                  child: Text('OK',
-                      style: TextStyle(fontSize: 20, color: Colors.white)),
+                  child: Text('OK', style: TextStyle(color: Colors.white)),
                   onPressed: () {
                     Navigator.of(context).pop(true);
                     Navigator.pushReplacement(
