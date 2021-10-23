@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ui/favourites_page.dart';
+import 'package:flutter_application_1/ui/politicasdeprivacidade.dart';
 import 'package:flutter_application_1/ui/termosdeuso.dart';
 import 'package:flutter_application_1/ui/referencias.dart';
 import 'package:flutter_application_1/ui/user_page.dart';
@@ -36,13 +36,13 @@ class NavDrawer extends StatelessWidget {
                     icon: Icons.document_scanner_rounded,
                     onClicked: () => selectedItem(context, 0),
                   ),
-                  //const SizedBox(height: 16),
-                  //buildMenuItem(
-                  // text: 'Políticas de privacidade',
-                  // icon: Icons.workspaces_outline,
-                  // onClicked: () => selectedItem(context, 1),
-                  //),
-                  //const SizedBox(height: 16),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Políticas de privacidade',
+                    icon: Icons.workspaces_outline,
+                    onClicked: () => selectedItem(context, 1),
+                  ),
+                  const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Referências',
                     icon: Icons.update,
@@ -129,7 +129,7 @@ class NavDrawer extends StatelessWidget {
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => FavouritesPage(),
+          builder: (context) => PoliticasDePrivacidade(),
         ));
         break;
       case 2:

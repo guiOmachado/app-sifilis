@@ -70,6 +70,7 @@ flutter:
     - assets/fotos/foto_amanda.PNG
     - assets/fotos/foto_fernanda.PNG
     - assets/documents/Termo_Uso.docx.pdf
+    - assets/documents/Politica_Privacidade.docx.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
