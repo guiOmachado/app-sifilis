@@ -19,11 +19,11 @@ class OpenState extends State<Open> {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          Color.fromARGB(1000, 181, 143, 200),
-          Color.fromARGB(1000, 222, 129, 85),
-          Color.fromARGB(1000, 142, 197, 231),
-          Color.fromARGB(1000, 121, 215, 148),
-          Color.fromARGB(1000, 247, 250, 138)
+          Color.fromARGB(255, 181, 143, 200),
+          Color.fromARGB(255, 222, 129, 85),
+          Color.fromARGB(255, 142, 197, 231),
+          Color.fromARGB(255, 121, 215, 148),
+          Color.fromARGB(255, 247, 250, 138)
         ],
       )),
       child: Column(

@@ -22,12 +22,16 @@ class UserPageState extends State<UserPage> {
           children: [
             build_perfil(context, bloc.equipe[0].nome, bloc.equipe[0].descricao,
                 bloc.equipe[0].foto),
-            build_perfil(context, bloc.equipe[0].nome, bloc.equipe[0].descricao,
-                bloc.equipe[0].foto),
-            build_perfil(context, bloc.equipe[0].nome, bloc.equipe[0].descricao,
-                bloc.equipe[0].foto),
-            build_perfil(context, bloc.equipe[0].nome, bloc.equipe[0].descricao,
-                bloc.equipe[0].foto)
+            build_perfil(context, bloc.equipe[1].nome, bloc.equipe[1].descricao,
+                bloc.equipe[1].foto),
+            build_perfil(context, bloc.equipe[2].nome, bloc.equipe[2].descricao,
+                bloc.equipe[2].foto),
+            build_perfil(context, bloc.equipe[3].nome, bloc.equipe[3].descricao,
+                bloc.equipe[3].foto),
+            build_perfil(context, bloc.equipe[4].nome, bloc.equipe[4].descricao,
+                bloc.equipe[4].foto),
+            build_perfil(context, bloc.equipe[5].nome, bloc.equipe[5].descricao,
+                bloc.equipe[5].foto)
           ],
         ));
   }

@@ -57,45 +57,37 @@ class MenuState extends State<Menu> {
     Text("Posição nao usada"),
     Text("Condução de VDRL",
         style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(500, 75, 66, 121))),
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Condução de teste rápido",
         style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(500, 75, 66, 121))),
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Gestante- Condução de teste rápido",
         style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(500, 75, 66, 121))),
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Noticias",
         style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(500, 75, 66, 121)))
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54))
   ];
 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             title: Text("Menu",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+                style: TextStyle(fontSize: 18, color: Colors.white)),
+            backgroundColor: Color.fromARGB(255, 222, 129, 85)),
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            build_selecao(context, 2),
-            build_selecao(context, 3),
-            build_selecao(context, 1),
-            build_selecao(context, 4)
+            build_selecao(context, 2, Color.fromARGB(255, 181, 143, 200)),
+            build_selecao(context, 3, Color.fromARGB(255, 222, 129, 85)),
+            build_selecao(context, 1, Color.fromARGB(255, 121, 215, 148)),
+            build_selecao(context, 4, Color.fromARGB(255, 247, 250, 138))
           ],
         ),
         drawer: NavDrawer());
   }
 
-  Widget build_selecao(BuildContext context, int index) {
+  Widget build_selecao(BuildContext context, int index, Color cor) {
     return GestureDetector(
         onTap: () {
           Navigator.pushReplacement(context,
@@ -109,7 +101,7 @@ class MenuState extends State<Menu> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
               Container(
-                color: Colors.deepPurple[100],
+                color: cor,
                 height: 100,
                 width: 10,
               ),

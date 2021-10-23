@@ -18,7 +18,7 @@ class FluxoVdrlState extends State<FluxoVdrl> {
         appBar: AppBar(
             title: Text("Condução de VDRL",
                 style: TextStyle(fontSize: 18, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+            backgroundColor: Color.fromARGB(1000, 247, 250, 138)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaStream,
             initialData: bloc.fluxo[1],

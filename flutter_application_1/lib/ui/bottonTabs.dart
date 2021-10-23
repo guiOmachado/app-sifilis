@@ -39,7 +39,7 @@ class _TabsState extends State<Tabs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(500, 75, 66, 121),
+        backgroundColor: Color.fromARGB(1000, 142, 197, 231),
         title: Text(
           'Trate sífilis',
           textAlign: TextAlign.end,
@@ -62,23 +62,23 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(
               icon: Icon(Icons.menu),
               label: 'Menu',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(1000, 142, 197, 231)),
           BottomNavigationBarItem(
               icon: Icon(Icons.bolt),
               label: 'Teste Rápido',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(1000, 142, 197, 231)),
           BottomNavigationBarItem(
               icon: Icon(Icons.pregnant_woman),
               label: 'GestanteTesteRapido',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(1000, 142, 197, 231)),
           BottomNavigationBarItem(
               icon: Icon(Icons.medical_services),
               label: 'VDRL',
-              backgroundColor: Color.fromARGB(500, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(1000, 142, 197, 231)),
         ],
-        backgroundColor: Color.fromARGB(500, 75, 66, 121),
+        backgroundColor: Color.fromARGB(1000, 142, 197, 231),
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepPurple[200],
+        selectedItemColor: Colors.white,
         onTap: onItemTapped,
       ),
     );
