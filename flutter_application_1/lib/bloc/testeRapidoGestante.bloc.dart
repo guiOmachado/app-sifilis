@@ -21,49 +21,49 @@ class GestanteReagenteENaoReagenteBloc {
         "Gestante tem úlcera anogenital ou outro sintoma de sífilis\n\n",
         7,
         21,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         21,
         "Gestante teve parceria sexual (nos últimos 3 meses) com diagnóstico de sífilis e não foi tratado\n\n",
         7,
         22,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(22, "Gestante  foi vítima de violência sexual\n\n", 7, 23,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         23,
         "Gestante com história prévia de sífilis e não completou o tratamento\n",
         7,
         24,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(24, "Gestante desconhece diagnóstico prévio de sífilis\n\n", 7,
-        25, Colors.orange[800]),
+        25, Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         25,
         "Gestante com chance de perda de acompanhamento no serviço\n\n",
         7,
         11,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         7,
         "Interpretação: SÍFILIS RECENTE (primária, secundária ou latente recente)",
         8,
         8,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         8,
         "- Solicitar VDRL imediatamente e agendar retorno para mostrar exame.\n" +
             "- Fornecer solicitação de VDRL mensalmente até o parto. Após o parto, solicitar VDRL a cada 3 meses até que complete 12 meses de monitoramento.",
         9,
         9,
-        Colors.yellow),
+        Color.fromARGB(255, 247, 250, 138)),
     new Fluxo(
         9,
         "- Notificar o caso para sífilis em gestante e encaminhar à vigilância em até 7 dias\n" +
             "- Avaliar e tratar para SÍFILIS RECENTE as parcerias sexuais dos últimos 3 meses.",
         10,
         10,
-        Colors.green),
+        Color.fromARGB(255, 121, 215, 148)),
     new Fluxo(
         10,
         "TRATAMENTO ADEQUADO É QUANDO:\n" +
@@ -71,59 +71,59 @@ class GestanteReagenteENaoReagenteBloc {
             "- SÍFILIS TARDIA: VDRL atual é pelo menos 2 diluições menores que o do diagnóstico 12 meses após tratamento (Ex: anterior 1:32, atual 1:8).",
         0,
         0,
-        Colors.yellow),
+        Color.fromARGB(255, 247, 250, 138)),
     new Fluxo(11, "Solicitar VDRL e aguardar resultado.", 10, 10,
-        Colors.blueAccent[100]),
+        Color.fromARGB(255, 142, 197, 231)),
     new Fluxo(12, "O paciente tem úlcera anogenital ou outro sintoma?", 16, 13,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         13,
         "O paciente teve parceria sexual (nos últimos 3 meses)\ncom diagnóstico de sífilis e não foi tratado?",
         16,
         14,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(14, "Interpretação: Teste NEGATIVO para sífilis", 15, 15,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         15,
         "Orientar:\n\n - GESTANTE - repetir o teste no terceiro trimestre" +
             "(28ª semana de gestação), se já não tiver sido realizado e, no momento do parto (ou em caso de aborto/natimorto).",
         0,
         0,
-        Colors.blueAccent[100]),
+        Color.fromARGB(255, 142, 197, 231)),
     new Fluxo(
         16,
         "Interpretação: SÍFILIS RECENTE (primária, secundária ou latente recente)",
         17,
         17,
-        Colors.orange[800]),
+        Color.fromARGB(255, 222, 129, 85)),
     new Fluxo(
         17,
         "Tratar imediatamente com dose única de Benzilpenicilina benzatina 2,4 milhões UI, intramuscular.\n" +
             "Se gestante/lactante tiver história préviade reação grave/anafilaxia após o uso de pencilina, encaminhar para especialista.",
         18,
         18,
-        Colors.blueAccent[100]),
+        Color.fromARGB(255, 142, 197, 231)),
     new Fluxo(
         18,
         "Solicitar VDRL imediatamente e agendar retorno para mostrar exame.",
         19,
         19,
-        Colors.green),
+        Color.fromARGB(255, 121, 215, 148)),
     new Fluxo(
         18,
         "- Orientar sobre a importância de realizar um novo teste rápido para sífilis após 30 dias, devido janela imunológica.\n\n" +
             "- Fornecer solicitação de VDRL mensalmente até o parto. Após o parto, solicitar VDRL a cada 3 meses até que complete 12 meses de monitoramento.",
         19,
         19,
-        Colors.yellow),
+        Color.fromARGB(255, 247, 250, 138)),
     new Fluxo(
         19,
         "- Notificar o caso para sífilis em gestante e encaminhar à vigilância em até 7 dias.\n\n"
         "- Avaliar e tratar para SÍFILIS RECENTE as parcerias sexuais dos últimos 3 meses.",
         20,
         20,
-        Colors.green),
+        Color.fromARGB(255, 121, 215, 148)),
     new Fluxo(
         20,
         "TRATAMENTO ADEQUADO É QUANDO:\n\n" +
@@ -131,7 +131,7 @@ class GestanteReagenteENaoReagenteBloc {
             "- SÍFILIS TARDIA: VDRL atual é pelo menos 2 diluições menores que o do diagnóstico 12 meses após tratamento (Ex: anterior 1:32, atual 1:8).\n\n",
         0,
         0,
-        Colors.yellow),
+        Color.fromARGB(255, 247, 250, 138)),
   ];
 
   resposta(int id) {

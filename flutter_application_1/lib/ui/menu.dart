@@ -73,8 +73,8 @@ class MenuState extends State<Menu> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Menu",
-                style: TextStyle(fontSize: 18, color: Colors.white)),
-            backgroundColor: Color.fromARGB(255, 222, 129, 85)),
+                style: TextStyle(fontSize: 18, color: Colors.black)),
+            backgroundColor: Colors.deepPurple[100]),
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

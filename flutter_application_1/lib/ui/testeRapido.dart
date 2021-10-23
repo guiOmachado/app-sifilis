@@ -18,8 +18,8 @@ class TesteRapidoState extends State<TesteRapido> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Teste Rápido",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+                style: TextStyle(fontSize: 15, color: Colors.black)),
+            backgroundColor: Color.fromARGB(255, 236, 221, 252)),
         body: new StreamBuilder(
             stream: bloc.fluxoTesteRapidoStream,
             initialData: bloc.testeRapido[0],
@@ -55,7 +55,7 @@ class TesteRapidoState extends State<TesteRapido> {
             bloc.resposta(fluxo.sim);
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 236, 221, 252),
           child: Text("Próximo"));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
@@ -66,7 +66,7 @@ class TesteRapidoState extends State<TesteRapido> {
             }));
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 236, 221, 252),
           child: Text("Fim"));
     } else {
       return Container(
@@ -83,14 +83,14 @@ class TesteRapidoState extends State<TesteRapido> {
                     }
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 236, 221, 252),
                   child: Text("Sim")),
               RaisedButton(
                   onPressed: () {
                     bloc.resposta(fluxo.nao);
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 236, 221, 252),
                   child: Text("Não")),
             ],
           ));
@@ -117,7 +117,7 @@ class TesteRapidoState extends State<TesteRapido> {
                         style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(500, 75, 66, 121))),
+                            color: Color.fromARGB(255, 75, 66, 121))),
                   ),
                 )
               ]))
@@ -133,7 +133,7 @@ class TesteRapidoState extends State<TesteRapido> {
             title: Text(
               'Opa . . .',
               style: TextStyle(
-                  fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)),
+                  fontSize: 25, color: Color.fromARGB(255, 75, 66, 121)),
             ),
             content: SingleChildScrollView(
               child: ListBody(
@@ -146,11 +146,11 @@ class TesteRapidoState extends State<TesteRapido> {
             ),
             actions: <Widget>[
               RaisedButton(
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 236, 221, 252),
                   child: Text('OK',
                       style: TextStyle(
                           fontSize: 20,
-                          color: Color.fromARGB(500, 75, 66, 121))),
+                          color: Color.fromARGB(255, 75, 66, 121))),
                   onPressed: () {
                     Navigator.of(context).pop(true);
                     Navigator.pushReplacement(

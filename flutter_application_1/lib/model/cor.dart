@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Cor {
-  Color identificacao = Colors.orange[800];
-  Color monitoramento = Colors.yellow;
-  Color notificacao = Colors.green;
-  Color assistencia = Colors.blueAccent[100];
+  Color identificacao = Color.fromARGB(255, 222, 129, 85);
+  Color monitoramento = Color.fromARGB(255, 247, 250, 138);
+  Color notificacao = Color.fromARGB(255, 121, 215, 148);
+  Color assistencia = Color.fromARGB(255, 142, 197, 231);
 
   Cor();
 

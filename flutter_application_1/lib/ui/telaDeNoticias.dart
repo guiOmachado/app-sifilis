@@ -16,8 +16,8 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Noticias",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
+            title: Text("Notícias",
+                style: TextStyle(fontSize: 15, color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream:
