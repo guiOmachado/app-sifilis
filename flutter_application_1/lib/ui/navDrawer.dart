@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/favourites_page.dart';
-import 'package:flutter_application_1/ui/people_page.dart';
+import 'package:flutter_application_1/ui/termosdeuso.dart';
 import 'package:flutter_application_1/ui/referencias.dart';
 import 'package:flutter_application_1/ui/user_page.dart';
 
@@ -31,11 +31,11 @@ class NavDrawer extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 16),
-                  //buildMenuItem(
-                  // text: 'Termo de uso',
-                  // icon: Icons.workspaces_outline,
-                  //onClicked: () => selectedItem(context, 0),
-                  //),
+                  buildMenuItem(
+                    text: 'Termos de uso',
+                    icon: Icons.document_scanner_rounded,
+                    onClicked: () => selectedItem(context, 0),
+                  ),
                   //const SizedBox(height: 16),
                   //buildMenuItem(
                   // text: 'Políticas de privacidade',
@@ -124,7 +124,7 @@ class NavDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PeoplePage(),
+          builder: (context) => TermosDeUso(),
         ));
         break;
       case 1:

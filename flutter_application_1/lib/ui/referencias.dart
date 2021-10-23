@@ -16,7 +16,7 @@ class ReferenciasState extends State<Referencias> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(1000, 142, 197, 231),
-          title: Text("Equipe Trate Sífilis"),
+          title: Text("Referências"),
           centerTitle: true,
         ),
         body: new ListView.builder(
