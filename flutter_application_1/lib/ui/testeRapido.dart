@@ -18,8 +18,8 @@ class TesteRapidoState extends State<TesteRapido> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Teste Rápido",
-                style: TextStyle(fontSize: 18, color: Colors.white)),
-            backgroundColor: Color.fromARGB(255, 181, 143, 200)),
+                style: TextStyle(fontSize: 15, color: Colors.black)),
+            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new StreamBuilder(
             stream: bloc.fluxoTesteRapidoStream,
             initialData: bloc.testeRapido[0],
@@ -55,8 +55,9 @@ class TesteRapidoState extends State<TesteRapido> {
             bloc.resposta(fluxo.sim);
           },
           autofocus: false,
-          color: Color.fromARGB(255, 181, 143, 200),
-          child: Text("Próximo", style: TextStyle(color: Colors.white)));
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Próximo",
+              style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
           onPressed: () {
@@ -66,8 +67,9 @@ class TesteRapidoState extends State<TesteRapido> {
             }));
           },
           autofocus: false,
-          color: Color.fromARGB(255, 181, 143, 200),
-          child: Text("Fim", style: TextStyle(color: Colors.white)));
+          color: Color.fromARGB(1000, 236, 221, 252),
+          child: Text("Fim",
+              style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
     } else {
       return Container(
           alignment: Alignment.bottomCenter,
@@ -83,15 +85,19 @@ class TesteRapidoState extends State<TesteRapido> {
                     }
                   },
                   autofocus: false,
-                  color: Color.fromARGB(255, 181, 143, 200),
-                  child: Text("Sim", style: TextStyle(color: Colors.white))),
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Sim",
+                      style:
+                          TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
               RaisedButton(
                   onPressed: () {
                     bloc.resposta(fluxo.nao);
                   },
                   autofocus: false,
-                  color: Color.fromARGB(255, 181, 143, 200),
-                  child: Text("Não", style: TextStyle(color: Colors.white))),
+                  color: Color.fromARGB(1000, 236, 221, 252),
+                  child: Text("Não",
+                      style:
+                          TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
             ],
           ));
     }

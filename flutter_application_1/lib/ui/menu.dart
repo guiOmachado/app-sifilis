@@ -64,7 +64,7 @@ class MenuState extends State<Menu> {
     Text("Gestante- Condução de teste rápido",
         style: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
-    Text("Noticias",
+    Text("Notícias",
         style: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54))
   ];
@@ -73,8 +73,8 @@ class MenuState extends State<Menu> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Menu",
-                style: TextStyle(fontSize: 18, color: Colors.white)),
-            backgroundColor: Color.fromARGB(255, 222, 129, 85)),
+                style: TextStyle(fontSize: 15, color: Colors.black)),
+            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
