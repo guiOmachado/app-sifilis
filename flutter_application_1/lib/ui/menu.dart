@@ -75,7 +75,8 @@ class MenuState extends State<Menu> {
             title: Text("Menu",
                 style: TextStyle(fontSize: 15, color: Colors.black)),
             backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
-        body: new Column(
+        body: SingleChildScrollView(
+            child: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             build_selecao(context, 2, Color.fromARGB(255, 181, 143, 200)),
@@ -83,7 +84,7 @@ class MenuState extends State<Menu> {
             build_selecao(context, 1, Color.fromARGB(255, 121, 215, 148)),
             build_selecao(context, 4, Color.fromARGB(255, 247, 250, 138))
           ],
-        ),
+        )),
         drawer: NavDrawer());
   }
 
