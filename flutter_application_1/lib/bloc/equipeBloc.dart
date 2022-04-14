@@ -31,7 +31,12 @@ class EquipeBloc {
     Equipe(
         "Guilherme Machado Silva",
         " - Acadêmico do Curso de Bacharelado em Informática Biomédica da UFCSPA.\n - Bolsista de Iniciação Tecnológica e Inovação da Fundação de Amparo a\n Pesquisa do Estado do Rio Grande do Sul (FAPERGS).\n - Membro do TeGEST.",
-        "assets/fotos/foto_guilherme.jpeg")
+        "assets/fotos/foto_guilherme.jpeg"),
+    Equipe(
+       "João Victor Correa Saldanha",
+        " - Acadêmico do Curso de Bacharelado em Informática Biomédica da UFCSPA.\n - Bolsista de Iniciação Tecnológica e Inovação da Fundação de Amparo a\n Pesquisa do Estado do Rio Grande do Sul (FAPERGS).\n - Membro do TeGEST.",
+        "assets/fotos/foto_joaoSaldanha.jpeg"
+    )
   ];
 
   void dispose() {
