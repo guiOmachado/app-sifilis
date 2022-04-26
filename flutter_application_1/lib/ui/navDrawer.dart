@@ -14,7 +14,7 @@ class NavDrawer extends StatelessWidget {
 
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 181, 143, 200),
+        color: Color.fromARGB(255, 121, 215, 148),
         child: ListView(
           children: <Widget>[
             buildHeader(

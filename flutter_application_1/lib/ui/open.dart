@@ -33,7 +33,7 @@ class OpenState extends State<Open> {
             Container(
               alignment: Alignment.center,
               child: Image.asset(
-                'assets/images/imagem_do_app.png',
+                'assets/images/imag-app2.jpeg',
                 height: 30.0.h,
                 width: 70.0.w,
               ),

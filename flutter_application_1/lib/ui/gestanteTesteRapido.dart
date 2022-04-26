@@ -25,7 +25,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
         appBar: AppBar(
             title: Text("Condução de teste rápido em gestante",
                 style: TextStyle(fontSize: 15, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+            backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaGestanteStream,
             initialData: bloc.gestante[0],

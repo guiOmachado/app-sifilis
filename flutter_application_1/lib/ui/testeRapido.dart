@@ -19,7 +19,7 @@ class TesteRapidoState extends State<TesteRapido> {
         appBar: AppBar(
             title: Text("Teste Rápido",
                 style: TextStyle(fontSize: 15, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+            backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: new StreamBuilder(
             stream: bloc.fluxoTesteRapidoStream,
             initialData: bloc.testeRapido[0],

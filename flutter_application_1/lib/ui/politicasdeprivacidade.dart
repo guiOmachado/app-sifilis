@@ -32,7 +32,7 @@ class _PoliticasDePrivacidadeState extends State<PoliticasDePrivacidade> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+        backgroundColor: Color.fromARGB(255, 121, 215, 148),
         title: Text("Política de Privacidade",
             style: TextStyle(
                 fontSize: 15,

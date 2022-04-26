@@ -74,7 +74,7 @@ class MenuState extends State<Menu> {
         appBar: AppBar(
             title: Text("Menu",
                 style: TextStyle(fontSize: 15, color: Colors.black)),
-            backgroundColor: Color.fromARGB(1000, 236, 221, 252)),
+            backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: SingleChildScrollView(
             child: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

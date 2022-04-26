@@ -43,7 +43,7 @@ class _Tabs1State extends State<Tabs1> {
     }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 75, 66, 121),
+        backgroundColor: Color.fromARGB(255, 222, 129, 85),
         title: Text(
           'Trate sífilis',
           textAlign: TextAlign.end,
@@ -66,21 +66,21 @@ class _Tabs1State extends State<Tabs1> {
           BottomNavigationBarItem(
               icon: Icon(Icons.menu),
               label: 'Menu',
-              backgroundColor: Color.fromARGB(255, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
               icon: Icon(Icons.medical_services),
               label: 'VDRL',
-              backgroundColor: Color.fromARGB(255, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
               icon: Icon(Icons.bolt),
               label: 'Teste Rápido',
-              backgroundColor: Color.fromARGB(255, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
               icon: Icon(Icons.pregnant_woman),
               label: 'GestanteTesteRapido',
-              backgroundColor: Color.fromARGB(255, 75, 66, 121)),
+              backgroundColor: Color.fromARGB(255, 222, 129, 85)),
         ],
-        backgroundColor: Color.fromARGB(255, 75, 66, 121),
+        backgroundColor: Color.fromARGB(255, 222, 129, 85),
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.deepPurple[200],
         onTap: onItemTapped,

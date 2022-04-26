@@ -32,7 +32,7 @@ class _TermosDeUsoState extends State<TermosDeUso> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+        backgroundColor: Color.fromARGB(255, 121, 215, 148),
         title: Text("Termos de Uso",
             style: TextStyle(
                 fontSize: 15,

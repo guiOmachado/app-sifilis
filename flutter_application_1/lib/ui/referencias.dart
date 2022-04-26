@@ -15,7 +15,7 @@ class ReferenciasState extends State<Referencias> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(1000, 236, 221, 252),
+          backgroundColor: Color.fromARGB(255, 121, 215, 148),
           title: Text("Referências",
               style: TextStyle(
                   fontSize: 15,
