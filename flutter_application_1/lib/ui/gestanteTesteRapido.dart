@@ -61,7 +61,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             bloc.resposta(fluxo.sim);
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Próximo", style: TextStyle(color: Colors.black)));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
@@ -72,7 +72,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             }));
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Fim", style: TextStyle(color: Colors.black)));
     } else {
       return Container(
@@ -85,7 +85,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
                     bloc.resposta(fluxo.sim);
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Sim", style: TextStyle(color: Colors.black))),
               RaisedButton(
                   onPressed: () {
@@ -96,7 +96,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
                     }
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Não", style: TextStyle(color: Colors.black)))
             ],
           ));
@@ -152,7 +152,7 @@ class GestanteFluxoState extends State<GestanteFluxo> {
             ),
             actions: <Widget>[
               RaisedButton(
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text('OK',
                       style:
                           TextStyle(color: Color.fromARGB(500, 75, 66, 121))),

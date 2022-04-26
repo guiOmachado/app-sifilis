@@ -55,7 +55,7 @@ class TesteRapidoState extends State<TesteRapido> {
             bloc.resposta(fluxo.sim);
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Próximo",
               style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
@@ -67,7 +67,7 @@ class TesteRapidoState extends State<TesteRapido> {
             }));
           },
           autofocus: false,
-          color: Color.fromARGB(1000, 236, 221, 252),
+          color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Fim",
               style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
     } else {
@@ -85,7 +85,7 @@ class TesteRapidoState extends State<TesteRapido> {
                     }
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Sim",
                       style:
                           TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
@@ -94,7 +94,7 @@ class TesteRapidoState extends State<TesteRapido> {
                     bloc.resposta(fluxo.nao);
                   },
                   autofocus: false,
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Não",
                       style:
                           TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
@@ -152,7 +152,7 @@ class TesteRapidoState extends State<TesteRapido> {
             ),
             actions: <Widget>[
               RaisedButton(
-                  color: Color.fromARGB(1000, 236, 221, 252),
+                  color: Color.fromARGB(255, 247, 250, 138),
                   child: Text('OK',
                       style: TextStyle(
                           fontSize: 20,
