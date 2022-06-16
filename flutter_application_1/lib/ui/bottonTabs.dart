@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/tabs.bloc.dart';
 
@@ -42,7 +44,10 @@ class _TabsState extends State<Tabs> {
         backgroundColor: Color.fromARGB(255, 222, 129, 85),
         title: Text(
           'Trate sífilis',
-          textAlign: TextAlign.end,
+          style: TextStyle(
+          fontFamily: 'Overlock-Regular'
+          ),
+        textAlign: TextAlign.end,  
         ),
       ),
       body: new StreamBuilder(

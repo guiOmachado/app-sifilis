@@ -57,23 +57,23 @@ class MenuState extends State<Menu> {
     Text("Posição nao usada"),
     Text("Condução de VDRL",
         style: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
+              fontFamily: 'Overlock-Regular', fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Condução de teste rápido",
         style: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
+           fontFamily: 'Overlock-Regular', fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Gestante- Condução de teste rápido",
         style: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
+           fontFamily: 'Overlock-Regular', fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54)),
     Text("Notícias",
         style: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54))
+           fontFamily: 'Overlock-Regular', fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black54))
   ];
 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             title: Text("Menu",
-                style: TextStyle(fontSize: 15, color: Colors.black)),
+                style: TextStyle(fontFamily: 'Overlock-Regular', fontSize: 15, color: Colors.black)),
             backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: SingleChildScrollView(
             child: new Column(

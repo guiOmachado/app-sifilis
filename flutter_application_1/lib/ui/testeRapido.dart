@@ -18,7 +18,7 @@ class TesteRapidoState extends State<TesteRapido> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Teste Rápido",
-                style: TextStyle(fontSize: 15, color: Colors.black)),
+                style: TextStyle(fontFamily: 'Overlock-Regular', fontSize: 15, color: Colors.black)),
             backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: new StreamBuilder(
             stream: bloc.fluxoTesteRapidoStream,
@@ -57,7 +57,7 @@ class TesteRapidoState extends State<TesteRapido> {
           autofocus: false,
           color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Próximo",
-              style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
+              style: TextStyle(fontFamily: 'Overlock-Regular', color: Color.fromARGB(500, 75, 66, 121))));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
           onPressed: () {
@@ -69,7 +69,7 @@ class TesteRapidoState extends State<TesteRapido> {
           autofocus: false,
           color: Color.fromARGB(255, 247, 250, 138),
           child: Text("Fim",
-              style: TextStyle(color: Color.fromARGB(500, 75, 66, 121))));
+              style: TextStyle(fontFamily: 'Overlock-Regular', color: Color.fromARGB(500, 75, 66, 121))));
     } else {
       return Container(
           alignment: Alignment.bottomCenter,
@@ -88,7 +88,7 @@ class TesteRapidoState extends State<TesteRapido> {
                   color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Sim",
                       style:
-                          TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
+                          TextStyle(fontFamily: 'Overlock-Regular', color: Color.fromARGB(500, 75, 66, 121)))),
               RaisedButton(
                   onPressed: () {
                     bloc.resposta(fluxo.nao);
@@ -97,7 +97,7 @@ class TesteRapidoState extends State<TesteRapido> {
                   color: Color.fromARGB(255, 247, 250, 138),
                   child: Text("Não",
                       style:
-                          TextStyle(color: Color.fromARGB(500, 75, 66, 121)))),
+                          TextStyle(fontFamily: 'Overlock-Regular', color: Color.fromARGB(500, 75, 66, 121)))),
             ],
           ));
     }
@@ -139,14 +139,14 @@ class TesteRapidoState extends State<TesteRapido> {
             title: Text(
               'Opa . . .',
               style: TextStyle(
-                  fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)),
+                  fontFamily: 'Overlock-Regular', fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)),
             ),
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
                   Text(
                       'Este não é o fluxo indicado para a situação, você será direcionado para o fluxo correto.',
-                      style: TextStyle(fontSize: 18))
+                      style: TextStyle(fontFamily: 'Overlock-Regular', fontSize: 18))
                 ],
               ),
             ),
@@ -155,6 +155,7 @@ class TesteRapidoState extends State<TesteRapido> {
                   color: Color.fromARGB(255, 247, 250, 138),
                   child: Text('OK',
                       style: TextStyle(
+                          fontFamily: 'Overlock-Regular',
                           fontSize: 20,
                           color: Color.fromARGB(500, 75, 66, 121))),
                   onPressed: () {

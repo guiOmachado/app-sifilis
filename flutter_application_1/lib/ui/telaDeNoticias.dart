@@ -17,7 +17,7 @@ class ListaDeNoticiasState extends State<ListaDeNoticias> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Notícias",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
+                style: TextStyle(fontFamily: 'Overlock-Regular', fontSize: 18, color: Colors.black)),
             backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: new StreamBuilder(
             stream:

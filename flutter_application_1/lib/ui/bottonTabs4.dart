@@ -46,6 +46,9 @@ class _Tabs4State extends State<Tabs4> {
         backgroundColor: Color.fromARGB(255, 222, 129, 85),
         title: Text(
           'Trate sífilis',
+           style: TextStyle(
+          fontFamily: 'Overlock-Regular'
+          ),
           textAlign: TextAlign.end,
         ),
       ),
@@ -82,7 +85,7 @@ class _Tabs4State extends State<Tabs4> {
         ],
         backgroundColor: Color.fromARGB(255, 222, 129, 85),
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepPurple[200],
+        selectedItemColor:  Colors.deepPurple[50],
         onTap: onItemTapped,
       ),
     );

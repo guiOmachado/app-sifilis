@@ -75,7 +75,7 @@ class NavDrawer extends StatelessWidget {
                         radius: 30,
                         backgroundColor: Color.fromARGB(255, 142, 197, 231),
                         backgroundImage:
-                            AssetImage('assets/images/imagem_do_app.png')),
+                            AssetImage('assets/images/imag-app2.jpeg')),
                     SizedBox(width: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

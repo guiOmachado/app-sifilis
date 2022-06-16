@@ -35,9 +35,10 @@ class _TermosDeUsoState extends State<TermosDeUso> {
         backgroundColor: Color.fromARGB(255, 121, 215, 148),
         title: Text("Termos de Uso",
             style: TextStyle(
+                fontFamily: 'Overlock-Regular',
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(500, 75, 66, 121))),
+                color: Colors.black)),
       ),
       body: _loading
           ? Center(
@@ -45,7 +46,7 @@ class _TermosDeUsoState extends State<TermosDeUso> {
             )
           : PDFViewer(
               document: _doc,
-              indicatorBackground: Color.fromARGB(500, 75, 66, 121),
+              indicatorBackground: Color.fromARGB(255, 121, 215, 148),
               // showIndicator: false,
               showPicker: false,
             ),

@@ -18,9 +18,10 @@ class ReferenciasState extends State<Referencias> {
           backgroundColor: Color.fromARGB(255, 121, 215, 148),
           title: Text("Referências",
               style: TextStyle(
+                  fontFamily: 'Overlock-Regular',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(500, 75, 66, 121))),
+                  color: Colors.black)),
           centerTitle: true,
         ),
         body: new ListView.builder(
@@ -38,7 +39,7 @@ class ReferenciasState extends State<Referencias> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
           Container(
-            color: Color.fromARGB(500, 75, 66, 121),
+            color: Color.fromARGB(255, 121, 215, 148),
             height: 100,
             width: 10,
           ),
@@ -50,7 +51,7 @@ class ReferenciasState extends State<Referencias> {
                     child: ListTile(
                       subtitle: Text(referencia,
                           style:
-                              TextStyle(color: Colors.black.withOpacity(0.6))),
+                              TextStyle(fontFamily: 'Overlock-Regular', color: Colors.black.withOpacity(0.6))),
                     )),
               ]))
         ]))));

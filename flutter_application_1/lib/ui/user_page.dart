@@ -15,7 +15,12 @@ class UserPageState extends State<UserPage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 222, 129, 85),
-          title: Text("Equipe Trate Sífilis"),
+          title: Text(
+            "Equipe Trate Sífilis",
+            style: TextStyle(
+          fontFamily: 'Overlock-Regular'
+          ),
+            ),
           centerTitle: true,
         ),
         body: new ListView(
@@ -48,7 +53,7 @@ class UserPageState extends State<UserPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
               Container(
-                color: Colors.deepPurple[100],
+                color: Color.fromARGB(255, 222, 129, 85),
                 height: 100,
                 width: 10,
               ),

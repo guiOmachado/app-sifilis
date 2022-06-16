@@ -17,7 +17,7 @@ class FluxoVdrlState extends State<FluxoVdrl> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Condução de VDRL",
-                style: TextStyle(fontSize: 18, color: Colors.black)),
+                style: TextStyle(fontFamily: 'Overlock-Regular', fontSize: 18, color: Colors.black)),
             backgroundColor: Color.fromARGB(255, 247, 250, 138)),
         body: new StreamBuilder(
             stream: bloc.fluxogramaStream,
@@ -56,7 +56,9 @@ class FluxoVdrlState extends State<FluxoVdrl> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 247, 250, 138),
-          child: Text("Próximo"));
+          child: Text("Próximo", 
+                style: TextStyle(
+                fontFamily: 'Overlock-Regular')));
     } else if ((fluxo.nao == fluxo.sim) && (fluxo.nao == 0 && fluxo.sim == 0)) {
       return RaisedButton(
           onPressed: () {
@@ -67,7 +69,9 @@ class FluxoVdrlState extends State<FluxoVdrl> {
           },
           autofocus: false,
           color: Color.fromARGB(255, 247, 250, 138),
-          child: Text("Fim"));
+          child: Text("Fim",
+          style: TextStyle(
+                fontFamily: 'Overlock-Regular')));
     } else {
       return Container(
           alignment: Alignment.bottomCenter,
@@ -80,7 +84,9 @@ class FluxoVdrlState extends State<FluxoVdrl> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 247, 250, 138),
-                  child: Text("Sim")),
+                  child: Text("Sim",
+                  style: TextStyle(
+                fontFamily: 'Overlock-Regular'))),
               RaisedButton(
                   onPressed: () {
                     if (fluxo.nao == 0) {
@@ -91,7 +97,9 @@ class FluxoVdrlState extends State<FluxoVdrl> {
                   },
                   autofocus: false,
                   color: Color.fromARGB(255, 247, 250, 138),
-                  child: Text("Não"))
+                  child: Text("Não",
+                  style: TextStyle(
+                fontFamily: 'Overlock-Regular')))
             ],
           ));
     }
@@ -115,6 +123,7 @@ class FluxoVdrlState extends State<FluxoVdrl> {
                   child: ListTile(
                     title: Text(fluxo.questao,
                         style: TextStyle(
+                            fontFamily: 'Overlock-Regular',
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: Color.fromARGB(500, 75, 66, 121))),

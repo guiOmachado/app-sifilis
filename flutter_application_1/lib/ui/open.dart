@@ -43,7 +43,7 @@ class OpenState extends State<Open> {
               padding: EdgeInsets.all(15.0),
               child: Text('Trate Sífilis',
                   style: TextStyle(
-                      fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)))),
+                     fontFamily: 'Overlock-Regular', fontSize: 25, color: Color.fromARGB(500, 75, 66, 121)))),
           Padding(
             padding: EdgeInsets.all(20.0),
             child: Row(
@@ -52,7 +52,8 @@ class OpenState extends State<Open> {
                 RaisedButton(
                     color: Color.fromARGB(500, 75, 66, 121),
                     child: Text('Entrar',
-                        style: TextStyle(
+                        style: TextStyle( 
+                            fontFamily: 'Overlock-Regular',
                             fontSize: 20,
                             color: Color.fromARGB(1000, 236, 221, 252))),
                     onPressed: () {
