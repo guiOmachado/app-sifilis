@@ -33,19 +33,19 @@ class NavDrawer extends StatelessWidget {
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Termos de uso',
-                    icon: Icons.document_scanner_rounded,
+                    icon: Icons.text_snippet ,
                     onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Políticas de privacidade',
-                    icon: Icons.workspaces_outline,
+                    icon: Icons.holiday_village ,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Referências',
-                    icon: Icons.update,
+                    icon: Icons.stream ,
                     onClicked: () => selectedItem(context, 2),
                   )
                 ],
