@@ -39,6 +39,7 @@ class _TabsState extends State<Tabs> {
 
   @override
   Widget build(BuildContext context) {
+    var interests;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 222, 129, 85),
@@ -65,19 +66,19 @@ class _TabsState extends State<Tabs> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.menu),
+              icon: Icon(Icons.menu_open),
               label: 'Menu',
               backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.bolt),
+              icon: Icon(Icons.flash_on),
               label: 'Teste Rápido',
               backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.pregnant_woman),
+              icon: Icon(Icons.family_restroom),
               label: 'GestanteTesteRapido',
               backgroundColor: Color.fromARGB(255, 222, 129, 85)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.medical_services),
+              icon: Icon(Icons.enhanced_encryption_sharp),
               label: 'VDRL',
               backgroundColor: Color.fromARGB(255, 222, 129, 85)),
         ],
