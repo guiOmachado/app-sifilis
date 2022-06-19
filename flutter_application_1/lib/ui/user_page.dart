@@ -64,8 +64,12 @@ class UserPageState extends State<UserPage> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: ListTile(
-                        title: Text(nome),
-                        subtitle: Text(descricao),
+                        title: Text(nome, style: TextStyle(
+          fontFamily: 'Overlock-Regular'
+          )),
+                        subtitle: Text(descricao, style: TextStyle(
+          fontFamily: 'Overlock-Regular'
+          )),
                       ),
                     ),
                   ]))

@@ -19,10 +19,10 @@ class OpenState extends State<Open> {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          Color.fromARGB(255, 181, 143, 200),
-          Color.fromARGB(255, 222, 129, 85),
-          Color.fromARGB(255, 142, 197, 231),
-          Color.fromARGB(255, 121, 215, 148),
+          Color.fromARGB(255, 247, 250, 138),
+          Color.fromARGB(255, 247, 250, 138),
+          Color.fromARGB(255, 247, 250, 138),
+          Color.fromARGB(255, 247, 250, 138),
           Color.fromARGB(255, 247, 250, 138)
         ],
       )),
@@ -34,8 +34,8 @@ class OpenState extends State<Open> {
               alignment: Alignment.center,
               child: Image.asset(
                 'assets/images/imag-app2.jpeg',
-                height: 30.0.h,
-                width: 70.0.w,
+                height: 70.0.h,
+                width: 100.0.w,
               ),
             ),
           ]),
