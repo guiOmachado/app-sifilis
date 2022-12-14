@@ -64,19 +64,19 @@ class _Tabs4State extends State<Tabs4> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.menu),
+              icon: Icon(Icons.menu_open),
               label: 'Menu',
               backgroundColor: Color.fromARGB(255, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.medical_services),
+              icon: Icon(Icons.enhanced_encryption_sharp),
               label: 'VDRL',
               backgroundColor: Color.fromARGB(255, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.bolt),
+              icon: Icon(Icons.flash_on),
               label: 'Teste Rápido',
               backgroundColor: Color.fromARGB(255, 75, 66, 121)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.pregnant_woman),
+              icon: Icon(Icons.family_restroom),
               label: 'GestanteTesteRapido',
               backgroundColor: Color.fromARGB(255, 75, 66, 121)),
         ],

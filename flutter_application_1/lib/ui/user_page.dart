@@ -30,8 +30,11 @@ class UserPageState extends State<UserPage> {
                 bloc.equipe[3].foto),
             build_perfil(context, bloc.equipe[4].nome, bloc.equipe[4].descricao,
                 bloc.equipe[4].foto),
-            build_perfil(context, bloc.equipe[5].nome, bloc.equipe[5].descricao,
-                bloc.equipe[5].foto)
+                build_perfil(context, bloc.equipe[5].nome, bloc.equipe[5].descricao,
+                bloc.equipe[5].foto),
+            build_perfil(context, bloc.equipe[6].nome, bloc.equipe[6].descricao,
+                bloc.equipe[6].foto)
+
           ],
         ));
   }

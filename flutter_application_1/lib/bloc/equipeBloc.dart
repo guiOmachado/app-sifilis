@@ -29,9 +29,14 @@ class EquipeBloc {
         " - Enfermeira. Mestre e Doutora em Enfermagem.\n - Professora Adjunta do Departamento de Enfermagem nos Cursos de Bacharelado em Enfermagem. Bacharelado em Informática Biomédica, e no PPGEnf.\n – Mestrado Profissional da UFCSPA.\n - Líder do Grupo de Pesquisa TeGEST.\n - Vice Coordenadora Geral do Projeto UNA-SUS/UFCSPA.\n - Conselheira do Conselho Regional de Enfermagem do Rio Grande do Sul (COREN-RS) gestão 2018-2023.",
         "assets/fotos/foto_adriana.PNG"),
     Equipe(
+       "João Victor Correa Saldanha",
+        " - Acadêmico do Curso de Bacharelado em Informática Biomédica da UFCSPA.\n - Bolsista de Iniciação Tecnológica e Inovação da Fundação de Amparo a\n Pesquisa do Estado do Rio Grande do Sul (FAPERGS).\n - Membro do TeGEST.",
+        "assets/fotos/foto_joaoSaldanha.jpeg"),
+    Equipe(
         "Guilherme Machado Silva",
         " - Acadêmico do Curso de Bacharelado em Informática Biomédica da UFCSPA.\n - Bolsista de Iniciação Tecnológica e Inovação da Fundação de Amparo a\n Pesquisa do Estado do Rio Grande do Sul (FAPERGS).\n - Membro do TeGEST.",
         "assets/fotos/foto_guilherme.jpeg")
+
   ];
 
   void dispose() {
